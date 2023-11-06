@@ -1,0 +1,14 @@
+.header__nav--group {
+    text-align: center;
+
+    &:nth-child(5n+1),
+    &:nth-child(5n+2),
+    &:nth-child(5n+3) {
+        grid-column: auto / span 4;
+    }
+
+    &:nth-child(5n+4),
+    &:nth-child(5n+5) {
+        grid-column: auto / span 6;
+    }
+}

@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 10px;
+    margin: 0;
+}
+
+.block {
+    padding: 20px 5px;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    text-align: center;
+    height: 100%;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+}
+
+
+@import "blocks/*.scss";
+@import "blocks/grid/_variables"; //переменные
+@import "blocks/grid/_breakpoints";
+@import "blocks/grid/_mixins";
+@import "blocks/grid/_classes"; //Классы
+@import "blocks/header/*.scss";
+@import "blocks/header/lll/*.scss";

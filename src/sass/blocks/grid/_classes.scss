@@ -1,0 +1,34 @@
+//Контейнер
+.container {
+    @include make-max-width-container();
+}
+
+//Ряд
+.row {
+    @include row;
+}
+
+// Гибкая колонка
+.col {
+    flex: 1 0 0%;
+}
+
+//Генерация колонок
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        @include col($i);
+    }
+}
+
+//Генерация при mobile-first -- 
+//@each $bp, $width in $grid-breakpoints-min {
+@each $bp, $width in $grid-breakpoints {
+    @include media($width) {
+        @for $i from 1 through $grid-columns {
+            .col-#{$bp}-#{$i} {
+                @include col($i);
+            }
+        }
+    }
+}

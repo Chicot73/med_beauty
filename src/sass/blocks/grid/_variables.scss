@@ -1,0 +1,41 @@
+//Максимальная ширина контейнера
+$container-max-widths: (
+    xxl: 128rem,
+    xl: 100rem,
+    lg: 80rem,
+    md: 65rem,
+    sm: 48rem,
+    xs: 30rem) !default;
+
+//Количество колонок
+$grid-columns: 12 !default;
+
+//Расстояние между элементами
+$grid-gap: 2rem !default;
+$grid-gap-side: calc($grid-gap / 2
+);
+
+//Контрольные точки
+/* $grid-breakpoints: (
+    xs: 32em,
+    sm: 57.6em,
+    md: 76.8em,
+    lg: 99.2em,
+    xl: 120em,
+    xxl: 140em) !default; */
+
+$grid-breakpoints: (
+    xxl: 87.5em,
+    xl: 75em,
+    lg: 62em,
+    md: 48em,
+    sm: 36em,
+    xs: 20em) !default;
+
+$grid-breakpoints-min: (
+    xs: 0,
+    sm: 57.6rem,
+    md: 76.8rem,
+    lg: 99.2rem,
+    xl: 120rem,
+    xxl: 140rem) !default;
