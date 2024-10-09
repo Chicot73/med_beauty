@@ -2,7 +2,8 @@
 
 @mixin make-max-width-container($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
     margin: 0 auto;
-    max-width: 128rem;
+    width: 100%;
+    max-width: 126rem;
     padding-left: $grid-gap-side;
     padding-right: $grid-gap-side;
 
@@ -35,7 +36,11 @@
 //Фиксированная колонка
 
 @mixin col($size) {
-    flex: 0 0 auto;
+    flex: 0 0 auto; // 1) flex-grow - распределение пропорций свободного пространства родительского блока. 
+    //если всем задать "1", то все элементы будут одинаковые и заполнят все место; 
+    //2) flex-shrink - коэффициент сжатия. Если "0" - элемент не будет ужиматься в ширину родительского блока 
+    //(не работает при включенной команде flex-wrap: wrap); 
+    //3) flex-basis - изменение ширины элемента (можно задать для всех эл.);
     width: calc(#{percentage(calc($size / $grid-columns))} - #{$grid-gap});
 }
 
@@ -55,7 +60,7 @@
 
 //Контрольная точка
 
-@mixin bp($name) {
+/* @mixin bp($name) {
     @media(max-width: $width) {
         $width: map-get($grid-breakpoints, $name);
 
@@ -63,7 +68,7 @@
             @content;
         }
     }
-}
+} 
 
 @mixin bp-min($name) {
     @media(min-width: $width) {
@@ -73,7 +78,7 @@
             @content;
         }
     }
-}
+} */
 
 //Медиа-запросы
 
@@ -114,7 +119,7 @@
 }
 
 @mixin for-desktop-xxxl {
-    @media (max-width: 120em) {
+    @media (max-width: 100em) {
         @content;
     }
 }

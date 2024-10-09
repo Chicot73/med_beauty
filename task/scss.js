@@ -14,8 +14,8 @@ const rename = require("gulp-rename"); //Отмена ужатия SCSS
 const size = require("gulp-size");
 const shorthand = require("gulp-shorthand"); //короткие выражения SCSS
 const groupCssMediaQueries = require("gulp-group-css-media-queries");
-const sass = require("gulp-sass")(require("sass"));
 const sassGlob = require("gulp-sass-glob");
+const sass = require("gulp-sass")(require("sass"));
 const webpCss = require("gulp-webp-css");
 
 //обработка SCSS

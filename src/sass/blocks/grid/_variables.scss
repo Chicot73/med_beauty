@@ -1,9 +1,14 @@
 //Максимальная ширина контейнера
 $container-max-widths: (
-    xxl: 128rem,
-    xl: 100rem,
-    lg: 80rem,
-    md: 65rem,
+    //xxl: 128rem,
+    xxl: 126rem,
+    //xl: 100rem,
+    xl: 102rem,
+    //lg: 80rem,
+    lg: 78rem,
+    //md: 65rem,
+    md: 66rem,
+    //sm: 48rem,
     sm: 48rem,
     xs: 30rem) !default;
 
@@ -32,10 +37,10 @@ $grid-breakpoints: (
     sm: 36em,
     xs: 20em) !default;
 
-$grid-breakpoints-min: (
+/* $grid-breakpoints-min: (
     xs: 0,
     sm: 57.6rem,
     md: 76.8rem,
     lg: 99.2rem,
     xl: 120rem,
-    xxl: 140rem) !default;
+    xxl: 140rem) !default; */
