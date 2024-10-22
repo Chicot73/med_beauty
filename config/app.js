@@ -3,7 +3,6 @@ const isDev = !isProd;
 
 module.exports = {
     isProd: isProd,
-
     isDev: isDev,
 
     htmlmin: {

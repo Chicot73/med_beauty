@@ -10,7 +10,7 @@ const notify = require("gulp-notify");
 const fileInclude = require("gulp-file-include"); //шаблонизация
 const htmlmin = require("gulp-htmlmin"); //ужимает HTML
 const size = require("gulp-size"); //выдает инфо с размером файла
-const webpHtml = require("gulp-webp-html"); //кидаешь jpg получаешь webp
+const webpHtml = require("gulp-webp-html"); //создает папку picture и webp в ней
 
 //обработка html
 

@@ -6,7 +6,7 @@ const path = require("./config/path.js");
 const app = require("./config/app.js");
 
 //Задачи
-//const clear = require('./task/clear.js');
+const clear = require('./task/clear.js');
 const pug = require('./task/pug.js');
 const scss = require('./task/scss.js');
 const js = require('./task/js.js');
@@ -46,7 +46,7 @@ exports.scss = scss;
 exports.js = js;
 exports.img = img;
 exports.fonts = fonts;
-//exports.clear = clear;
+exports.clear = clear;
 
 //Сборка
 exports.default = app.isProd
