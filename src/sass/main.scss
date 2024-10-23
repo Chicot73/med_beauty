@@ -1,7 +1,113 @@
-*,
+@import "blocks/mixins.scss";
+@import "blocks/*.scss";
+
+/**
+  Нормализация блочной модели
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class]) {
+    margin-block: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+    list-style: none;
+}
+
+/**
+  Упрощаем работу с изображениями
+ */
+li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img,
+picture {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+html,
+body {
+    font-size: 10px;
+    font-family: 'Inter', 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+:root {
+    --color-accent: #CD3B31;
+    --color-text: #151516;
+    --color-gray: #6B7073;
+    --color-light-gray: #C4C4C4;
+    // color: var(--color-text);
 }
 
 html,
@@ -10,24 +116,18 @@ body {
     margin: 0;
 }
 
-.block {
-    padding: 20px 5px;
-    background-color: #ddd;
-    border: 1px solid #aaa;
-    text-align: center;
-    height: 100%;
-}
-
 .row {
     justify-content: center;
     align-items: center;
 }
 
+.container {
+    position: relative;
+}
 
-@import "blocks/*.scss";
 @import "blocks/grid/_variables"; //переменные
 @import "blocks/grid/_breakpoints";
 @import "blocks/grid/_mixins";
 @import "blocks/grid/_classes"; //Классы
 @import "blocks/header/*.scss";
-@import "blocks/header/lll/*.scss";
+@import "blocks/footer/*.scss";
