@@ -1,6 +1,12 @@
-@import "blocks/*.scss";
 @import "blocks/fonts.scss";
 @import "blocks/mixins.scss";
+@import "blocks/grid/_variables"; //переменные
+@import "blocks/grid/_breakpoints";
+@import "blocks/grid/_mixins";
+@import "blocks/grid/_classes"; //Классы
+@import "blocks/*.scss";
+@import "blocks/header/*.scss";
+@import "blocks/footer/*.scss";
 
 /**
   Нормализация блочной модели
@@ -99,7 +105,7 @@ picture {
 html,
 body {
     font-size: 10px;
-    font-family: 'Inter', 'Roboto', Arial, sans-serif;
+    font-family: 'Gilroy', 'Inter', 'Roboto', Arial, sans-serif;
     line-height: 1.5;
 }
 
@@ -125,10 +131,3 @@ body {
 .container {
     position: relative;
 }
-
-@import "blocks/grid/_variables"; //переменные
-@import "blocks/grid/_breakpoints";
-@import "blocks/grid/_mixins";
-@import "blocks/grid/_classes"; //Классы
-@import "blocks/header/*.scss";
-@import "blocks/footer/*.scss";
