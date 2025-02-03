@@ -1,0 +1,195 @@
+#module01 {
+
+  opacity: 0;
+  animation: module1 .7s ease-out;
+
+  @keyframes module1 {
+
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+#module02 {
+
+  transform: translate(0, 0) scale(.5);
+  top: 56.3rem;
+  right: 70rem;
+  opacity: 0;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  animation: module2 .7s ease-out;
+
+  @keyframes module2 {
+
+    from {
+      top: 56.3rem;
+      right: 0;
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    to {
+      top: 56.3rem;
+      right: 70rem;
+      opacity: 0;
+      transform: translate(0, 0) scale(.5);
+    }
+  }
+}
+
+#module03 {
+
+  transform: translate(0, 0) scale(1);
+  top: 14.7rem;
+  right: 2.7rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  opacity: 1;
+  animation: module3 .7s ease-out;
+
+  @keyframes module3 {
+
+    from {
+      top: 50rem;
+      right: -9rem;
+      opacity: 0;
+      transform: translate(0, 0) scale(.8);
+    }
+
+    to {
+      top: 14.7rem;
+      right: 2.7rem;
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+  }
+}
+
+#module04 {
+
+  transform: translate(0, 0) scale(1);
+  top: 54.1rem;
+  right: 2.2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  opacity: 1;
+  animation: module4 .7s ease-out;
+
+  @keyframes module4 {
+
+    from {
+      top: 100rem;
+      right: 50rem;
+      opacity: 0;
+      transform: translate(0, 0) scale(.8);
+    }
+
+    to {
+      top: 54.1rem;
+      right: 2.2rem;
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+  }
+}
+
+#bigdevice {
+
+    width: 76.5rem;
+    top: -5.1rem;
+    left: 16.1rem;
+    animation: bigdev .7s ease-out;
+
+    @keyframes bigdev {
+
+      from {
+        width: 100.6rem;
+        top: 14.6rem;
+        left: 19.8rem;
+      }
+
+      to {
+        width: 76.5rem;
+        top: -5.1rem;
+        left: 16.1rem;
+      }
+    }
+  }
+
+#fog {
+
+  width: 86rem;
+  top: -12rem;
+  right: 50rem;
+  transform: rotate(29deg);
+  animation: fog .7s ease-out;
+
+  @keyframes fog {
+
+    from {
+      width: 126rem;
+      top: -87rem;
+      right: 9.2rem;
+      transform: rotate(17deg);
+    }
+
+    to {
+      width: 86rem;
+      top: -12rem;
+      right: 50rem;
+      transform: rotate(29deg);
+    }
+  }
+}
+
+#blur {
+
+  width: 73rem;
+  top: 0rem;
+  right: 65rem;
+  opacity: 1;
+  animation: blur .7s ease-out;
+
+  @keyframes blur {
+
+    from {
+      width: 126rem;
+      top: 30rem;
+      right: 35rem;
+      opacity: 0;
+    }
+
+    to {
+      width: 73rem;
+      top: 0rem;
+      right: 65rem;
+      opacity: 1;
+    }
+  }
+}
+
+#alert_start {
+  pointer-events:all;
+  visibility: visible;
+  opacity: .99;
+  animation: alert .7s ease-out;
+  
+  @keyframes alert {
+
+    from {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    to {
+      visibility: visible;
+      opacity: .99;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.video {
+
+  &__textbox {
+    margin-bottom: 7rem;
+  }
+
+  &__link {
+    display: block;
+    border-radius: 2.3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__btn {
+    width: 8.4rem;
+    height: 8.4rem;
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(4.8rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+

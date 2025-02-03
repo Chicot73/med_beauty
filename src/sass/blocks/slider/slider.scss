@@ -1,0 +1,221 @@
+.slider {
+
+  padding-top: 10rem;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10rem;
+    height: 95rem;
+  }
+
+  &__part1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  &__zag {
+    @include font (500, 17.6rem, 65%);
+      color: var(--color-zag);
+      margin-bottom: 5rem;
+  }
+
+  &__podz {
+    @include font (500, 2.4rem, 90%);
+      color: var(--color-text);
+      margin-bottom: 4rem;
+  }
+
+  &__note p {
+    width: 100%;
+    max-width: 44.2rem;
+    @include font (400, 1.6rem, 140%);
+      color: var(--color-text);
+  }
+
+  &__part2 {
+    width: 50%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    position: relative;
+    height: 89rem;
+  }
+
+  &__advert {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 89rem;
+      
+  }
+
+  &__advtxt {
+    margin-bottom: 2.5rem;
+
+    & h3 {
+      @include font (500, 3.2rem, 90%);
+        color: var(--color-zag);
+        margin-bottom: 2rem;
+    }
+
+    & p {
+      @include font (400, 1.6rem, 140%);
+      color: var(--color-text);
+      margin-bottom: 65rem;
+    }
+  }
+
+  &__slide {
+    width: 100%;
+    height: 59.4rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 29rem;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translate(-52%,-50%);
+    z-index: 1000;
+    background: transparent;
+  }
+
+  &__image1 {
+    width: 100%;
+    max-width: 28rem;
+    position: absolute;
+    bottom: -4rem;
+    left: 50%;
+    transform: translate(-52%, -50%);
+    z-index: 1000;
+    background: transparent;
+  }
+
+  &__image2 {
+    width: 100%;
+    max-width: 24rem;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translate(-52%, -50%);
+    z-index: 1000;
+    background: transparent;
+  }
+
+  &__textblock p {
+    @include font (400, 1.6rem, 140%);
+      color: var(--color-text);
+  }
+
+
+ &__border1 {
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    top: 16rem;
+    left: 0;
+    border-left: #ffffff solid .1rem;
+    border-top: #ffffff solid .1rem;
+    z-index: 10;
+  }
+
+  &__border2 {
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    top: 16rem;
+    right: 0;
+    border-right: #ffffff solid .1rem;
+    border-top: #ffffff solid .1rem;
+    z-index: 10;
+  }
+
+  &__border3 {
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    bottom: 22rem;
+    left: 0;
+    border-left: #ffffff solid .1rem;
+    border-bottom: #ffffff solid .1rem;
+    z-index: 10;
+  }
+
+  &__border4 {
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    bottom: 22rem;
+    right: 0;
+    border-right: #ffffff solid .1rem;
+    border-bottom: #ffffff solid .1rem;
+    z-index: 10;
+  }
+
+  &__nav {
+    height: 7rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}
+
+.slider__btn-prev {
+  width: 7rem;
+  height: 7rem;
+  padding: 2.5rem;
+  background: #414145;
+  background-repeat: no-repeat;
+  background-size: 1px;
+  border: 0.1rem solid #C9C9C9;
+  border-radius: 50%;
+  position: absolute;
+    bottom: 50%;
+    left: 6rem;
+    transform: translate(-50%, 0) rotate(90deg);
+    z-index: 1001;
+    cursor: pointer;
+}
+.slider__btn-next {
+  width: 7rem;
+  height: 7rem;
+  padding: 2.5rem;
+  background: #414145;
+  background-repeat: no-repeat;
+  background-size: 1px;
+  border: 0.1rem solid #C9C9C9;
+  border-radius: 50%;
+  position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translate(-50%, 0) rotate(-90deg);
+    z-index: 1001;
+    cursor: pointer;
+}
+
+#img {
+
+  & picture img {
+
+    width: 12.4rem;
+    height: 50rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent;
+  }
+}

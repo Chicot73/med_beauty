@@ -1,0 +1,26 @@
+.more {
+
+  &__wrapper {
+    display: flex;
+    opacity: .99;
+    background-color: rgba(20, 21, 25, 0.24);
+    backdrop-filter: blur(7.6rem);
+    border: 0.2rem solid #2f2f2f;
+    border-radius: 3rem;
+  }
+
+  &__form {
+      width: 45%;
+      max-width:none;
+      transform: scale(1.005);
+  }
+
+  &__video {
+    width: 55%;
+    opacity: .99;
+    padding: 4rem;
+    background-color: rgba(20, 21, 25, 0.24);
+    backdrop-filter: blur(7.6rem);
+  }
+}
+

@@ -1,0 +1,119 @@
+.learning {
+
+  height: 50rem;
+  margin-bottom: 34rem;
+
+  &__border {
+    padding-top: 4.5rem;
+    border: 0.2rem solid #2f2f2f;
+    border-radius: 3rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  &__title {
+    width: 42%;
+    margin-right: 3.9rem;
+  }
+
+  &__textbox {
+    width: 58%;
+    margin-right: 7.5rem;
+  }
+
+  &__staffgroup {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__module {
+    
+    position: relative;
+    width: 26.4rem;
+
+    &:nth-child(1) {
+      margin-top: 11.6rem;
+      padding-right: 7rem;
+    }
+    &:nth-child(2) {
+      margin-top: .9rem;
+      padding-right: 3rem;
+    }
+    &:nth-child(3) {
+      margin-top: 1.9rem;
+    }
+    &:nth-child(4) {
+      margin-top: 13.4rem;
+    }
+
+    & h3 {
+      @include font (700, 1.8rem, 110%);
+      color: var(--color-zag);
+      margin-bottom: 1.5rem;
+    }
+    & p {
+      @include font (400, 1.4rem, 110%);
+      color: var(--color-text);
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+  }
+
+  &__foto {
+    position: relative;
+    display: flex;
+    align-items:end;
+    margin-top: -5rem;
+    justify-content: center;
+  }
+
+  &__foto-item {
+    &:nth-child(1) {
+      margin-left: -23rem;
+    }
+    &:nth-child(2) {
+      margin-left: -4rem;
+    }
+    &:nth-child(3) {
+      margin-left: -3rem;
+      z-index: 10;
+    }
+    &:nth-child(4) {
+      position: absolute;
+      right: 23rem;
+      bottom: 0;
+    }
+  }
+
+}
+#a1 {
+  width: 10.3rem;
+  bottom: -6rem;
+  right: 0rem;
+}
+
+#a2 {
+  width: 3.7rem;
+  bottom: 3.7rem;
+  right: 1rem;
+}
+
+#a3 {
+  width: 5.3rem;
+  bottom:-0.5rem;
+  left: -5rem;
+}
+
+#a4 {
+  width: 10.3rem;
+  bottom: -6rem;
+  right: 18rem;
+}

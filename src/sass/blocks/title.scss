@@ -1,0 +1,16 @@
+.title {
+  @include zag (500, 6.5rem, 90%);
+  color: var(--color-zag);
+  margin-bottom: 3rem;
+}
+
+.maintext {
+  @include font (400, 1.8rem, 140%);
+  color: var(--color-text);
+}
+
+.maintext16 {
+  @include font (400, 1.6rem, 140%);
+  color: var(--color-text);
+}
+

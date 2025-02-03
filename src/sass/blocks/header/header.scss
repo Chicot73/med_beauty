@@ -1,4 +1,166 @@
 .header {
-    border: .1rem dashed #1D4ED8;
-    background: #DBEAFE;
+
+  background: #151322;
+  
+  &__logo {
+    display: block;
+    width: 22.4rem;
+  }
+
+  &__logo-burger {
+    display: block;
+    width: 22.4rem;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  &__top {
+    @include vert-c;
+    padding: 3.2rem 0;
+  }
+  
+  &__between {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+  
+  &__wrapper {
+    width: 75.8rem;
+    @include vert-c;
+  }
+  
+  &__menu {
+    width: 64.8rem;
+    @include vert-c;
+  }
+  
+  &__burger-btn {
+    width: 4rem;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  &__menu-item {
+    color: var(--color-text);
+    @include font (400, 1.8rem, 100%);
+    transition: color .2s ease-in-out;
+    &:hover {
+        color: var(--color-accent);
+        transition: color .2s ease-in-out;
+      }
+  }
+
+  &__form {
+    display: none;
+    width: 100%;
+    max-width: 65rem;
+    position: fixed;
+    top: 2.8rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &__form-btn {
+    margin-left: auto;
+      margin-right: 0;
+  }
+  
+  &__cover {
+    width: 100%;
+    height: 140rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:rgba($color: #000000, $alpha: 0.5);
+    z-index: 70;
+    overflow: hidden;
+    display: none;
+  }
+  
+  &__burger {
+    // display: none;
+    opacity: 0;
+    position: fixed;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 100%;
+    max-width: 79.6rem;
+    height: 100vh;
+    top: 0;
+    right: -150%;
+    z-index: 150;
+    background-color: rgba(20, 21, 25, 0.24);
+    backdrop-filter: blur(8.6rem);
+    border: 1px solid #2f2f2f;
+    border-radius: 3rem;
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+  }
+
+  &__burger--in {
+    opacity: .99;
+    right: 0;
+    animation: slice1 .5s;
+    animation-timing-function: ease-out;
+    transition: opacity 0.5s ease;
+  
+    @keyframes slice1 {
+  
+      from {
+        right: -150%;
+      }
+  
+      to {
+        right: 0;
+      }
+    }
+  }
+
+  &__burger--out {
+    opacity: 0;
+    right: -150%;
+    animation: slice2 .5s;
+    animation-timing-function: ease-out;
+
+    @keyframes slice2 {
+
+      from {
+        right: 0
+      }
+
+      to {
+        right: -150%;
+      }
+    }
+  }
+
+  &__burger-wrap {
+    height: 100%;
+    width: 100%;
+    max-width: 42rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 5rem;
+    margin-left: auto;
+  }
+
+  &__burger-item {
+    display: block;
+    color: var(--color-zag);
+      @include zag (500, 4.8rem, 90%);
+    margin-bottom: 4rem;
+    text-align: right;
+  }
+  
+  &__cross {
+    background-color: transparent;
+    width: 3rem;
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    transform: translate(0, 0);
+    z-index: 180;
+  }
 }

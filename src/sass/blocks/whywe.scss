@@ -1,0 +1,88 @@
+.whywe {
+
+  margin-bottom: 15rem;
+
+  &__title {
+    margin-bottom: 4.5rem;
+  }
+
+  &__wrapper {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 3rem 3rem;
+    grid-template-areas:
+    'block-1 block-4 block-6'
+    'block-1 block-4 block-6'
+    'block-2 block-4 block-7'
+    'block-2 block-5 block-7'
+    'block-3 block-5 block-8'
+    'block-3 block-5 block-8';
+  }
+
+  &__block {
+
+    border: 0.2rem solid #2f2f2f;
+    border-radius: 3rem;
+    padding: 3rem;
+    position: relative;
+
+    &:nth-child(1) {
+      grid-area: block-1;
+    }
+    &:nth-child(2) {
+      grid-area: block-2;
+    }
+    &:nth-child(3) {
+      grid-area: block-3;
+    }
+    &:nth-child(4) {
+      grid-area: block-4;
+    }
+    &:nth-child(5) {
+      grid-area: block-5;
+    }
+    &:nth-child(6) {
+      grid-area: block-6;
+    }
+    &:nth-child(7) {
+      grid-area: block-7;
+    }
+    &:nth-child(8) {
+      grid-area: block-8;
+    }
+  }
+
+  &__wrap {
+    width: 85%;
+    max-width: 33rem;
+  }
+
+  & h3 {
+
+    @include font (700, 1.8rem, 110%);
+    margin-bottom: 1.5rem;
+    color: var(--color-zag);
+
+  }
+
+  & p {
+
+    @include font (400, 1.6rem, 110%);
+    color: var(--color-text);
+
+  }
+
+  &__image {
+
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;     
+    background: transparent;
+
+  }
+
+}

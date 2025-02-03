@@ -1,2 +1,54 @@
 header.header
+    .header__cover
+    .header__burger
+        .header__burger-wrap
+            img.header__logo-burger(src="img/logo.svg", alt="Med Beauty logo")
+
+            nav#header_links
+                a.header__burger-item(href="#") О нас 
+                a.header__burger-item(href="#") Оборудование
+                a.header__burger-item(href="#") Академия
+                a.header__burger-item(href="#") Консалтинг
+                a.header__burger-item(href="#") Контакты
+
+            button.header__form-btn.button__sub(type="button") Связаться
+            
+        button.header__cross(type="button") 
+            img(src="img/cross.svg", alt="закрыть дополнительное меню")
+
+    form#form.header__form.form(action="#", method="POST")
+        h2.form__title.title Остались вопросы?
+
+        label(for="name") 
+            input#name.form__input(type="text", name="name", placeholder="Ваше имя", maxlength="35")
+            //- img(src="img/form_pers.svg")
+
+        label(for="phone")
+            input#phone.form__input.tel-selector(type="tel", name="phone", placeholder="Ваш телефон")
+            //- img(src="img/form_call.svg")
+
+        label(for="question")
+            textarea#question.form__input(type="text", name="question" placeholder="Здесь будет Ваш вопрос" maxlength="1500")
+
+        input.form__check(type="checkbox", id="agree")
+        label.form__check-label(for="agree") Я даю согласие на обработку персольных данных в соответствии с политикой конфиденциальности и условием пользования
+        p#warning.form__confirm Пожалуйста дайте свое согласие на обработку персональных данных
+
+        button.form__btn.button__sub(type="submit") Связаться
+
     .container
+        .header__top
+            a.header__logo(href="#")
+                img(src="img/logo.svg", alt="Med Beauty logo")
+
+            .header__between
+            .header__wrapper
+                nav.header__menu
+                    a.header__menu-item(id="testdrive-item" onclick="TestDriveFn()") Test-drive
+                    a.header__menu-item(id="decisions-item" onclick="decisionsFn()") Решения
+                    a.header__menu-item(id="learning-item" onclick="learningFn()") Обучение                
+                    a.header__menu-item(id="trust-item" onclick="trustFn()") Доверие
+                    a.header__menu-item(id="questions-item" onclick="questionsFn()") FAQ
+
+                button.header__burger-btn(type="button") 
+                    img(src="img/burger.svg", alt="дополнительное меню")

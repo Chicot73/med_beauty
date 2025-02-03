@@ -1,0 +1,41 @@
+.screen {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75.8vw;
+    height: 47.5vw;
+    z-index: 5;
+    background: rgba(126, 126, 126, 0.74);
+    z-index: 1100;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 0.3rem solid #979595;
+    background-color: var(--color-gray);
+    box-shadow: 1.4rem 0.8rem 1.7rem 0 rgba(0, 0, 0, 0.30);
+  }
+
+  &__cross {
+    position: absolute;
+    top: .8vw;
+    right: .6vw;
+    width: 1.6vw;
+    height: 1.6vw;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1300;
+
+    & img {
+      position: absolute;
+      width: 60%;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

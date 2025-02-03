@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'CocoSharp';
+    font-family: 'CocoSharp Trial';
     src: url('../fonts/Coco-Sharp-Bold-trial.eot');
     src: local('CocoSharpBoldtrial'), local('Coco-Sharp-Bold-trial'),
         url('../fonts/Coco-Sharp-Bold-trial.eot?#iefix') format('embedded-opentype'),
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: 'CocoSharp';
+    font-family: 'CocoSharp Trial';
     src: url('../fonts/Coco-Sharp-Regular-trial.eot');
     src: local('CocoSharpRegulartrial'), local('Coco-Sharp-Regular-trial'),
         url('../fonts/Coco-Sharp-Regular-trial.eot?#iefix') format('embedded-opentype'),
@@ -28,5 +28,38 @@
         url('../fonts/Gilroy-Regular') format('woff'),
         url('../fonts/Gilroy-Regular') format('truetype');
     font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.eot');
+    src: local('Gilroy Medium'), local('Gilroy-Medium'), local('GilroyMedium'),
+        url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Medium') format('woff'),
+        url('../fonts/Gilroy-Medium') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-SemiBold.eot');
+    src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'), local('GilroySemiBold'),
+        url('../fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-SemiBold') format('woff'),
+        url('../fonts/Gilroy-SemiBold') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.eot');
+    src: local('Gilroy Bold'), local('Gilroy-Bold'), local('GilroyBold'),
+        url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Bold') format('woff'),
+        url('../fonts/Gilroy-Bold') format('truetype');
+    font-weight: 700;
     font-style: normal;
 }

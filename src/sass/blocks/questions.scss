@@ -1,0 +1,76 @@
+.questions {
+  
+  margin-bottom: 15rem;
+  
+  &__wrapper {
+    display: flex;
+  }
+
+  &__part1 {
+    width: 45%;
+    padding-right: 3rem;
+  }
+
+  &__part2 {
+    width: 55%;
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__textbox {
+    margin-bottom: 4rem;
+  }
+
+  &__texts {
+    width: 90%;
+    max-width: 62.2rem;
+  }
+
+  &__block {
+
+    border: 0.2rem solid #2f2f2f;
+    border-radius: 1.4rem;
+    padding: 3rem;
+    position: relative;
+    cursor: pointer;
+
+    &:not(:last-child) {
+
+      margin-bottom: 15px;
+
+    }
+
+    & button {
+
+      width: 2.4rem;
+      height: 2.4rem;
+      position: absolute;
+      top: 50%;
+      right: 3rem;
+      transform: translate(0, -50%) ;
+      background: transparent;
+
+    }
+
+    & h3 {
+
+      @include font (700, 1.8rem, 110%);
+      color: var(--color-zag);
+
+    }
+
+    & p {
+
+      @include font (400, 1.4rem, 140%);
+      color: var(--color-gray);
+      margin-top: -3.7rem;
+      opacity: 0;
+      visibility: hidden;
+
+    }
+
+  }
+
+}

@@ -2,8 +2,18 @@
     font-weight: $weight; //начертание
     font-size: $size; //размер
     line-height: $height; //интерлиньяж
-    font-family: 'Calibri';
+    font-family: 'Gilroy';
     //@include font (400, 1.4rem, 115%);
+}
+
+@mixin zag ($weight, $size, $height) {
+    font-weight: $weight; //начертание
+    font-size: $size; //размер
+    line-height: $height; //интерлиньяж
+    font-family: 'Gilroy';
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    //@include zag (400, 1.4rem, 115%);
 }
 
 @mixin vert-c {
@@ -31,6 +41,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@mixin txt-white {
+    color: #FFFFFF;
 }
 
 //Медиа-выражение

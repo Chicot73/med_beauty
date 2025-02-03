@@ -7,6 +7,7 @@
 @import "blocks/*.scss";
 @import "blocks/header/*.scss";
 @import "blocks/footer/*.scss";
+@import "blocks/slider/*.scss";
 
 /**
   Нормализация блочной модели
@@ -105,16 +106,26 @@ picture {
 html,
 body {
     font-size: 10px;
-    font-family: 'Gilroy', 'Inter', 'Roboto', Arial, sans-serif;
+    font-family: 'Gilroy', 'Futuris', 'Roboto', Arial, sans-serif;
     line-height: 1.5;
+    color: #ffffff;
 }
 
 :root {
-    --color-accent: #CD3B31;
-    --color-text: #151516;
-    --color-gray: #6B7073;
-    --color-light-gray: #C4C4C4;
+    --color-accent: #eacb55;
+    --color-text: #ffffff;
+    --color-zag: #ffffff;
+    --color-gray: #A9A9A9;
+    --color-gray2: #686868;
+    --color-darkgray: #373737;
     // color: var(--color-text);
+}
+
+body {
+    background: #141519;
+    position: relative;
+    height: 100%;
+    padding-bottom: 29rem;
 }
 
 html,
