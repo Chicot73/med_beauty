@@ -3,6 +3,7 @@
   opacity: 0;
   animation: module1 .7s ease-out;
 
+
   @keyframes module1 {
 
     from {
@@ -41,12 +42,41 @@
       transform: translate(0, 0) scale(.5);
     }
   }
+
+  @include for-tablet-portrait-md {
+
+    transform: translate(0, 0) scale(.5);
+    top: 10rem;
+    right: 79rem;
+    opacity: 0;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    animation: module2 1.2s ease-out;
+
+    @keyframes module2 {
+
+      from {
+        top: 23.3rem;
+        right: 4.6rem;
+        width: 40rem;
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+      }
+
+      to {
+
+        right: 79rem;
+        opacity: 0;
+        transform: translate(0, 0) scale(.5);
+      }
+    }
+  }
 }
 
 #module03 {
 
   transform: translate(0, 0) scale(1);
-  top: 14.7rem;
+  top: 12.7rem;
   right: 2.7rem;
   margin-bottom: 2rem;
   overflow: hidden;
@@ -63,10 +93,88 @@
     }
 
     to {
-      top: 14.7rem;
+      top: 12.7rem;
       right: 2.7rem;
       opacity: 1;
       transform: translate(0, 0) scale(1);
+    }
+  }
+
+  @include for-laptop-desktop-xl {
+
+    transform: translate(0, 0) scale(1);
+    top: 12.7rem;
+    right: 0;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    opacity: 1;
+    animation: module3 .7s ease-out;
+
+    @keyframes module3 {
+
+      from {
+        top: 50rem;
+        right: -9rem;
+        opacity: 0;
+        transform: translate(0, 0) scale(.8);
+      }
+
+      to {
+        top: 12.7rem;
+        right: 0;
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+      }
+    }
+  }
+
+  @include for-tablet-portrait-md {
+
+    width: 35rem;
+    top: 2.7rem;
+    right: 15.7rem;
+    opacity: 1;
+
+    animation: module3 .7s ease-out;
+
+    @keyframes module3 {
+
+      from {
+        top: 14.7rem;
+        right: 2.7rem;
+        opacity: 0;
+      }
+
+      to {
+        width: 35rem;
+        top: 2.7rem;
+        right: 15.7rem;
+        opacity: 1;
+      }
+    }
+  }
+
+  @include for-phone-landscape-sm {
+    top: 2.7rem;
+    opacity: 1;
+    right: -3.3rem;
+
+    animation: module3 .7s ease-out;
+
+    @keyframes module3 {
+
+      from {
+        top: 14.7rem;
+        opacity: 0;
+        right: 2.7rem;
+      }
+
+      to {
+
+        top: 2.7rem;
+        opacity: 1;
+        right: -3.3rem;
+      }
     }
   }
 }
@@ -76,8 +184,6 @@
   transform: translate(0, 0) scale(1);
   top: 54.1rem;
   right: 2.2rem;
-  margin-bottom: 2rem;
-  overflow: hidden;
   opacity: 1;
   animation: module4 .7s ease-out;
 
@@ -97,13 +203,110 @@
       transform: translate(0, 0) scale(1);
     }
   }
+
+  @include for-tablet-landscape-lg {
+    transform: translate(0, 0) scale(1);
+    top: 45.1rem;
+    right: -0.8rem;
+    opacity: 1;
+    animation: module4 .7s ease-out;
+
+    @keyframes module4 {
+
+      from {
+        top: 100rem;
+        right: 50rem;
+        opacity: 0;
+        transform: translate(0, 0) scale(.8);
+      }
+
+      to {
+        top: 45.1rem;
+        right: -0.8rem;
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+      }
+    }
+  }
+
+  @include for-tablet-portrait-md {
+
+    width: 25rem;
+    top: 20.1rem;
+    right: 9.2rem;
+    opacity: 1;
+    animation: module4 .7s ease-out;
+
+    @keyframes module4 {
+
+      from {
+        top: 50.1rem;
+        right: 40rem;
+        opacity: 0;
+      }
+
+      to {
+        width: 25rem;
+        top: 20.1rem;
+        right: 9.2rem;
+        opacity: 1;
+      }
+    }
+  }
+
+  @include for-phone-landscape-sm {
+    width: 25rem;
+    top: 19.1rem;
+    right: 2.2rem;
+    opacity: 1;
+    animation: module4 .7s ease-out;
+
+    @keyframes module4 {
+
+      from {
+        width: 25rem;
+        top: 18.1rem;
+        right: 18.2rem;
+        opacity: 0;
+      }
+
+      to {
+        width: 25rem;
+        top: 19.1rem;
+        right: 2.2rem;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 #bigdevice {
 
-    width: 76.5rem;
-    top: -5.1rem;
-    left: 16.1rem;
+  width: 85.5rem;
+  top: -5.1rem;
+  left: 16.1rem;
+  animation: bigdev .7s ease-out;
+
+  @keyframes bigdev {
+
+    from {
+      width: 100.6rem;
+      top: 15.6rem;
+      left: 24.8rem;
+    }
+
+    to {
+      width: 85.5rem;
+      top: -5.1rem;
+      left: 16.1rem;
+    }
+  }
+
+  @include for-desktop-xxl {
+
+    width: 79.8rem;
+    top: 2.9rem;
+    left: 8.1rem;
     animation: bigdev .7s ease-out;
 
     @keyframes bigdev {
@@ -111,16 +314,103 @@
       from {
         width: 100.6rem;
         top: 14.6rem;
-        left: 19.8rem;
+        left: 16.1rem;
       }
 
       to {
-        width: 76.5rem;
-        top: -5.1rem;
-        left: 16.1rem;
+        width: 79.8rem;
+        top: 2.9rem;
+        left: 8.1rem;
       }
     }
   }
+
+  @include mezdu {
+
+    left: 0rem;
+    animation: bigdev .7s ease-out;
+
+    @keyframes bigdev {
+
+      from {
+        left: 8.1rem;
+      }
+
+      to {
+        left: 0rem;
+      }
+    }
+  }
+
+  @include for-laptop-desktop-xl {
+
+    width: 67rem;
+    top: 10rem;
+    left: -10rem;
+    animation: bigdev .7s ease-out;
+
+    @keyframes bigdev {
+
+      from {
+        width: 76rem;
+        top: 7.6rem;
+        left: -18rem;
+      }
+
+      to {
+        width: 67rem;
+        top: 10rem;
+        left: -10rem;
+      }
+    }
+  }
+
+  @include for-tablet-landscape-lg {
+
+    left: 10rem;
+    width: 70rem;
+    top: 61.6rem;
+    animation: bigdev .7s ease-out;
+
+    @keyframes bigdev {
+
+      from {
+        width: 88.6rem;
+        top: 69.6rem;
+        left: 2.8rem;
+      }
+
+      to {
+        left: 10rem;
+        width: 70rem;
+        top: 61.6rem;
+      }
+    }
+  }
+
+  @include for-tablet-portrait-md {
+
+    width: 45rem;
+    top: 28rem;
+    left: 5rem;
+    animation: bigdev .7s ease-out;
+
+    @keyframes bigdev {
+
+      from {
+        width: 61.6rem;
+        top: 31.6rem;
+        left: -5.2rem;
+      }
+
+      to {
+        width: 45rem;
+        top: 28rem;
+        left: 5rem;
+      }
+    }
+  }
+}
 
 #fog {
 
@@ -172,24 +462,78 @@
       opacity: 1;
     }
   }
+
+  @include for-desktop-xxl {
+
+    width: 73rem;
+    top: 11rem;
+    right: 65rem;
+    opacity: 1;
+    animation: blur .7s ease-out;
+
+    @keyframes blur {
+
+      from {
+        width: 126rem;
+        top: 39rem;
+        right: 35rem;
+        opacity: 0;
+      }
+
+      to {
+        width: 73rem;
+        top: 11rem;
+        right: 65rem;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 #alert_start {
-  pointer-events:all;
+  pointer-events: all;
   visibility: visible;
   opacity: .99;
   animation: alert .7s ease-out;
-  
+
   @keyframes alert {
 
     from {
+      pointer-events: none;
       visibility: hidden;
       opacity: 0;
     }
 
     to {
+      pointer-events: all;
       visibility: visible;
       opacity: .99;
+    }
+  }
+}
+
+#list-start {
+  opacity: 1;
+  top: 3rem;
+  pointer-events: all;
+  visibility: visible;
+
+  animation: go1 .1s ease-out;
+
+  @keyframes go1 {
+
+    from {
+      pointer-events: none;
+      visibility: hidden;
+      top: -1rem;
+      opacity: 0;
+    }
+
+    to {
+      top: 3rem;
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
     }
   }
 }

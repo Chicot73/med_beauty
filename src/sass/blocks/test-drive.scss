@@ -10,12 +10,39 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
     overflow: hidden;
-    background-image: url("../../img/devise.jpg");
+    background-image: url("../img/devise.jpg");
     background-repeat: no-repeat;
-      background-size: 60%;
-      background-position-x:right;
-      background-position-y:99%;
+    background-size: 60%;
+    background-position-x: right;
+    background-position-y: 99%;
 
+    @include for-desktop-xxl {
+      padding-left: 7.8rem;
+    }
+
+    @include for-laptop-desktop-xl {
+      padding-left: 6rem;
+    }
+
+    @include for-tablet-portrait-md {
+      padding-left: 5rem;
+    }
+
+    @include for-phone-landscape-sm {
+      background-image: url("../img/devise.jpg");
+      background-repeat: no-repeat;
+      background-size: 117%;
+      background-position-x: right;
+      background-position-y: 99%;
+      border: .2rem solid #2f2f2f;
+      border-radius: 3rem;
+      padding-left: 2rem;
+      padding-top: 5rem;
+      padding-bottom: 29rem;
+      overflow: hidden;
+      background-position-x: right;
+      background-position-y: 99%;
+    }
   }
 
   &__part1 {
@@ -23,25 +50,39 @@
     max-width: 52rem;
     padding-right: 6rem;
 
+    @include for-phone-landscape-sm {
+      padding-right: 2rem;
+    }
+
   }
 
   & p {
     @include font (400, 1.6rem, 140%);
-      color: var(--color-text);
-      margin-bottom: 3.2rem;
+    color: var(--color-text);
+    margin-bottom: 3.2rem;
   }
 
   & ul {
     margin-bottom: 7rem;
     padding-right: 9rem;
     flex-shrink: 0;
+
+    @include for-phone-landscape-sm {
+      padding-right: 0rem;
+      margin-bottom: 3rem;
+    }
   }
 
   & li {
     @include font (400, 1.6rem, 140%);
-      color: var(--color-text);
-      padding-left: 1.7rem;
-      position: relative;
+    color: var(--color-text);
+    padding-left: 1.7rem;
+    position: relative;
+
+    @include for-phone-landscape-sm {
+      padding-left: 0;
+    }
+
     &::before {
       content: '';
       width: 0.8rem;
@@ -55,6 +96,9 @@
       border: .1rem solid #e7cc6a;
       border-radius: 50%;
 
+      @include for-phone-landscape-sm {
+        display: none;
+      }
 
     }
   }
@@ -66,5 +110,5 @@
     right: 0;
   }
 
-  
+
 }

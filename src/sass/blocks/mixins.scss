@@ -3,6 +3,7 @@
     font-size: $size; //размер
     line-height: $height; //интерлиньяж
     font-family: 'Gilroy';
+    text-transform: none;
     //@include font (400, 1.4rem, 115%);
 }
 
@@ -12,8 +13,8 @@
     line-height: $height; //интерлиньяж
     font-family: 'Gilroy';
     letter-spacing: 0.06em;
-    text-transform: uppercase;
-    //@include zag (400, 1.4rem, 115%);
+        text-transform: uppercase;
+        //@include zag (400, 1.4rem, 115%);
 }
 
 @mixin vert-c {
@@ -63,11 +64,16 @@
 
 //Медиа-запросы
 
+//320
+
 @mixin for-phone-portrait-xs {
     @media (max-width: 20em) {
         @content;
     }
 }
+
+
+//576
 
 @mixin for-phone-landscape-sm {
     @media (max-width: 36em) {
@@ -75,11 +81,17 @@
     }
 }
 
+
+//768
+
 @mixin for-tablet-portrait-md {
     @media (max-width: 48em) {
         @content;
     }
 }
+
+
+//992
 
 @mixin for-tablet-landscape-lg {
     @media (max-width: 62em) {
@@ -87,17 +99,34 @@
     }
 }
 
+
+//1200
+
 @mixin for-laptop-desktop-xl {
     @media (max-width: 75em) {
         @content;
     }
 }
 
+
+//1300
+
+@mixin mezdu {
+    @media (max-width: 81.25em) {
+        @content;
+    }
+}
+
+
+//1400
+
 @mixin for-desktop-xxl {
     @media (max-width: 87.5em) {
         @content;
     }
 }
+
+//1600
 
 @mixin for-desktop-xxxl {
     @media (max-width: 100em) {

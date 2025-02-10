@@ -12,6 +12,10 @@
       border: orange solid .1rem;
       cursor: pointer;
       transition: all 0.7s ease;
+
+      @include for-tablet-portrait-md {
+        padding: 1.9rem;
+      }
     
     &:hover {
       color: #FFD700;
@@ -30,5 +34,9 @@
     border-radius: 4.3rem;
     border: #ffffff solid .1rem;
     cursor: pointer;
+
+    @include for-tablet-portrait-md {
+      padding: 1.9rem;
+    }
   }
 }

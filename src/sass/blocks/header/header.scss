@@ -1,54 +1,158 @@
 .header {
-
   background: #151322;
-  
+
   &__logo {
-    display: block;
-    width: 22.4rem;
+    flex-shrink: 0 !important;
+    display: block !important;
+    width: 22.4rem !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+
+    @include for-desktop-xxl {
+      width: 21.4rem !important;
+    }
+
+    @include for-tablet-portrait-md {
+      width: 17rem !important;
+    }
+
   }
 
   &__logo-burger {
-    display: block;
-    width: 22.4rem;
-    flex-shrink: 0;
-    margin-left: auto;
-    margin-right: 0;
+    display: block !important;
+    width: 22.4rem !important;
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+
+    @include for-desktop-xxl {
+      width: 21.4rem !important;
+    }
+
+    @include for-laptop-desktop-xl {
+      width: 21.2rem !important;
+    }
+
+    @include for-tablet-landscape-lg {
+      margin-bottom: 5rem !important;
+    }
+
+    @include for-tablet-portrait-md {
+      width: 17rem !important;
+    }
   }
-  
+
   &__top {
     @include vert-c;
     padding: 3.2rem 0;
   }
-  
+
   &__between {
     flex-grow: 1;
     flex-shrink: 0;
   }
-  
+
   &__wrapper {
-    width: 75.8rem;
-    @include vert-c;
+    width: 75.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
   }
-  
+
   &__menu {
     width: 64.8rem;
     @include vert-c;
+    margin-right: 5rem;
+
+    @include for-desktop-xxl {
+      width: 66.2rem;
+    }
+
+    @include for-laptop-desktop-xl {
+      display: none;
+    }
   }
-  
+
   &__burger-btn {
+    margin-bottom: 0;
     width: 4rem;
     background: transparent;
     cursor: pointer;
+
+    @include for-tablet-portrait-md {
+      width: 2.3rem;
+    }
   }
-  
+
   &__menu-item {
     color: var(--color-text);
-    @include font (400, 1.8rem, 100%);
-    transition: color .2s ease-in-out;
+    @include font(400, 1.8rem, 100%);
+    transition: color 0.2s ease-in-out;
+
     &:hover {
-        color: var(--color-accent);
-        transition: color .2s ease-in-out;
+      color: var(--color-accent);
+      transition: color 0.2s ease-in-out;
+    }
+  }
+
+  &__chose-lang {
+    color: var(--color-text);
+    @include font(400, 1.8rem, 100%);
+    background: transparent;
+    position: relative;
+    width: 5.8rem;
+    transition: color 0.2s ease-in-out;
+    flex-shrink: 0;
+
+    &:hover {
+      color: var(--color-accent);
+      transition: color 0.2s ease-in-out;
+    }
+
+    & span {
+      margin-left: 0.8rem;
+
+      & picture img {
+        width: 1.3rem;
+        height: 0.9rem;
+        flex-shrink: 0;
       }
+    }
+  }
+
+  &__randome {
+    width: 7.6rem;
+    display: block;
+    background: #1d1c2d;
+    padding: 0.15rem 0;
+    border: 0.2rem solid #2f2f2f;
+    border-radius: 1rem;
+    z-index: 100;
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    top: -1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    opacity: 0;
+
+    & p {
+      color: var(--color-text);
+      background: rgba($color: #ffffff, $alpha: 0);
+      @include font(400, 1.8rem, 100%);
+      transition: color 0.2s ease-in-out;
+      position: relative;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+
+      &:hover {
+        color: var(--color-accent);
+        background: rgba($color: #ffffff, $alpha: 0.05);
+        transition: color 0.2s ease-in-out;
+      }
+    }
   }
 
   &__form {
@@ -59,25 +163,34 @@
     top: 2.8rem;
     left: 50%;
     transform: translate(-50%, 0);
+
+    @include for-laptop-desktop-xl {
+      max-width: 55rem;
+    }
   }
 
   &__form-btn {
     margin-left: auto;
-      margin-right: 0;
+    margin-right: 0;
+
+    @include for-tablet-landscape-lg {
+      margin-bottom: 0;
+      margin-top: auto;
+    }
   }
-  
+
   &__cover {
     width: 100%;
     height: 140rem;
     position: absolute;
     top: 0;
     left: 0;
-    background:rgba($color: #000000, $alpha: 0.5);
+    background: rgba($color: #000000, $alpha: 0.5);
     z-index: 70;
     overflow: hidden;
     display: none;
   }
-  
+
   &__burger {
     // display: none;
     opacity: 0;
@@ -89,28 +202,39 @@
     height: 100vh;
     top: 0;
     right: -150%;
-    z-index: 150;
+    z-index: 2700;
     background-color: rgba(20, 21, 25, 0.24);
     backdrop-filter: blur(8.6rem);
     border: 1px solid #2f2f2f;
     border-radius: 3rem;
     overflow: hidden;
     transition: opacity 0.5s ease;
+
+    @include for-desktop-xxl {
+      max-width: 65rem;
+    }
+
+    @include for-laptop-desktop-xl {
+      max-width: 50rem;
+    }
+
+    @include for-tablet-portrait-md {
+      width: 74%;
+    }
   }
 
   &__burger--in {
-    opacity: .99;
+    opacity: 0.99;
     right: 0;
-    animation: slice1 .5s;
+    animation: slice1 0.5s;
     animation-timing-function: ease-out;
     transition: opacity 0.5s ease;
-  
+
     @keyframes slice1 {
-  
       from {
         right: -150%;
       }
-  
+
       to {
         right: 0;
       }
@@ -120,13 +244,12 @@
   &__burger--out {
     opacity: 0;
     right: -150%;
-    animation: slice2 .5s;
+    animation: slice2 0.5s;
     animation-timing-function: ease-out;
 
     @keyframes slice2 {
-
       from {
-        right: 0
+        right: 0;
       }
 
       to {
@@ -136,31 +259,84 @@
   }
 
   &__burger-wrap {
-    height: 100%;
     width: 100%;
     max-width: 42rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-right: 5rem;
+    margin-right: 15rem;
     margin-left: auto;
+    height: 100%;
+    justify-content: space-between;
+
+    @include for-laptop-desktop-xl {
+      margin-right: 12rem;
+    }
+
+    @include for-tablet-portrait-md {
+      justify-content: start;
+      margin-right: 2rem;
+      padding-right: 2rem;
+
+      // height: 57rem;
+
+    }
+  }
+
+  #header_links a[id] {
+    display: none;
+
+    @include for-laptop-desktop-xl {
+      display: block;
+    }
   }
 
   &__burger-item {
     display: block;
     color: var(--color-zag);
-      @include zag (500, 4.8rem, 90%);
-    margin-bottom: 4rem;
+    @include zag(500, 4.8rem, 90%);
     text-align: right;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    @include for-desktop-xxl {
+      @include zag(500, 3.8rem, 90%);
+    }
+
+    @include for-laptop-desktop-xl {
+      @include font(500, 2.8rem, 90%);
+      text-transform: none;
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include for-tablet-portrait-md {
+      @include font(500, 1.8rem, 90%);
+
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
   }
-  
+
   &__cross {
     background-color: transparent;
     width: 3rem;
     position: absolute;
     top: 4rem;
-    left: 4rem;
+    left: 9%;
     transform: translate(0, 0);
     z-index: 180;
+
+    @include for-laptop-desktop-xl {
+      width: 2rem;
+    }
+
+    @include for-tablet-portrait-md {
+      display: none;
+    }
   }
 }

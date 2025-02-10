@@ -6,20 +6,46 @@
   width: 100%;
   padding-bottom: 4rem;
 
+  @include for-tablet-portrait-md {
+    padding-bottom: 3rem;
+  }
+
+  @include for-phone-landscape-sm {
+    padding-bottom: 5rem;
+  }
+
   &__wrapper {
     display: flex;
     // align-items: center;
     justify-content: space-between;
+
+    @include for-phone-landscape-sm {
+      display: block;
+    }
   }
 
   &__office {
     width: 30rem;
+
+    @include for-tablet-portrait-md {
+      margin-bottom: 3rem;
+    }
   }
 
   &__logo {
-    display: block;
-    width: 22.4rem;
-    margin-bottom: 5.4rem;
+    display: block !important;
+    width: 22.4rem !important;
+    margin-bottom: 5.4rem !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+
+    @include for-desktop-xxl {
+      margin-bottom: 2.7rem !important;
+    }
+
+    @include for-tablet-portrait-md {
+      width: 17.4rem !important;
+    }
   }
 
   &__address {
@@ -37,27 +63,61 @@
   &__copyright {
     @include font (400, 1.2rem, 140%);
     color: var(--color-gray);
+
+    @include for-tablet-portrait-md {
+      position: absolute;
+      bottom: -3.7rem;
+      left: 1.5rem;
+    }
   }
 
   &__links {
     width: 100%;
     display: flex;
     padding-left: 10rem;
+    z-index: 10;
+
+    @include mezdu {
+      padding-left: 8rem;
+    }
+
+    @include for-tablet-landscape-lg {
+      display: block;
+      padding-left: 5rem;
+    }
+
+    @include for-phone-landscape-sm {
+      padding-left: 0rem;
+    }
+
   }
 
   &__navigation {
 
     width: 29%;
 
+    @include for-tablet-portrait-md {
+      margin-bottom: 3rem;
+    }
+
     & a {
       display: block;
     }
+
     & a h2 {
-      display: block;
       @include font (700, 1.8rem, 110%);
       color: var(--color-zag);
       transition: color .2s ease-in-out;
       margin-bottom: 2.4rem;
+
+      @include for-laptop-desktop-xl {
+        font: 700 1.6rem / 110% "Gilroy";
+      }
+
+      @include for-tablet-portrait-md {
+        margin-bottom: 1.5rem;
+      }
+
       &:hover {
         color: var(--color-accent);
         transition: color .2s ease-in-out;
@@ -69,16 +129,28 @@
 
     width: auto;
 
+    @include for-tablet-portrait-md {
+      margin-bottom: 5rem;
+    }
+
     & a {
       display: block;
     }
 
     & a h2 {
-      display: block;
       @include font (700, 1.8rem, 110%);
       color: var(--color-zag);
       transition: color .2s ease-in-out;
       margin-bottom: 2.4rem;
+
+      @include for-laptop-desktop-xl {
+        font: 700 1.6rem / 110% "Gilroy";
+      }
+
+      @include for-tablet-portrait-md {
+        margin-bottom: 1.5rem;
+      }
+
       &:hover {
         color: var(--color-accent);
         transition: color .2s ease-in-out;
@@ -87,7 +159,24 @@
   }
 
   &__programm {
+
     width: 32%;
+
+    @include for-desktop-xxl {
+
+      width: 44%;
+    }
+
+    @include for-laptop-desktop-xl {
+
+      width: 49%;
+    }
+
+    @include for-tablet-portrait-md {
+      width: 74%;
+      margin-bottom: 0;
+      text-align: left;
+    }
   }
 
   &__progtxt {
@@ -95,6 +184,17 @@
     color: var(--color-zag);
     margin-bottom: 1rem;
     text-align: right;
+
+
+    @include for-tablet-landscape-lg {
+      font: 700 1.6rem / 110% "Gilroy";
+    }
+
+    @include for-tablet-portrait-md {
+      text-align: left;
+    }
+
+
   }
 
   &__text {
@@ -103,6 +203,10 @@
     margin-bottom: 1rem;
     text-align: right;
     margin-bottom: 2rem;
+
+    @include for-tablet-portrait-md {
+      text-align: left;
+    }
   }
 
   &__call {
@@ -112,12 +216,49 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items:end;
+    align-items: end;
     bottom: 0;
     right: 0;
     padding-left: 1rem;
     padding-right: 1rem;
     position: absolute;
+
+    @include for-desktop-xxl {
+      margin-bottom: 1.5rem;
+      width: 21%;
+      height: 5rem;
+    }
+
+    @include mezdu {
+      padding-left: 0rem;
+    }
+
+    @include for-laptop-desktop-xl {
+      display: block;
+      text-align: end;
+      margin-bottom: 3.5rem;
+      height: 2.9rem;
+    }
+
+    @include for-tablet-landscape-lg {
+      height: 15.9rem;
+    }
+
+    @include for-phone-landscape-sm {
+      height: 6rem;
+      display: flex;
+      position: inherit;
+      width: 100%;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+    }
+
+    & button {
+
+      // margin-right: 2rem;
+
+    }
 
   }
 
@@ -125,7 +266,22 @@
 
     width: 10.2rem;
     align-self: flex-start;
-    
+
+    @include for-laptop-desktop-xl {
+      margin-left: auto;
+      text-align: end;
+      margin-right: 0;
+      margin-top: 2rem;
+    }
+
+    @include for-phone-landscape-sm {
+
+      flex-shrink: 0;
+      margin-left: 0;
+      margin-right: auto;
+      width: 11rem;
+    }
+
     & a {
       flex-shrink: 0;
 
@@ -134,9 +290,5 @@
       height: 2.4rem;
       margin-right: 1rem;
     }
-  }
-
-  &__btn {
-
   }
 }

@@ -3,26 +3,89 @@
   height: 50rem;
   margin-bottom: 34rem;
 
+  @include for-laptop-desktop-xl {
+    margin-bottom: 42rem;
+  }
+
+  @include for-tablet-landscape-lg {
+    height: auto;
+    margin-bottom: 13rem;
+  }
+
+  @include for-tablet-portrait-md {
+    margin-bottom: 11rem;
+  }
+
   &__border {
     padding-top: 4.5rem;
     border: 0.2rem solid #2f2f2f;
     border-radius: 3rem;
+    overflow: hidden;
+
+    @include for-tablet-landscape-lg {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      position: relative;
+    }
+
+    @include for-phone-landscape-sm {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 
   &__wrapper {
     display: flex;
     padding-left: 6rem;
     padding-right: 6rem;
+
+    @include for-laptop-desktop-xl {
+      padding-right: 3rem;
+    }
+
+    @include for-tablet-landscape-lg {
+      display: block;
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
   }
 
   &__title {
     width: 42%;
     margin-right: 3.9rem;
+
+    @include for-laptop-desktop-xl {
+      margin-right: 1.9rem;
+    }
+
+    @include for-tablet-landscape-lg {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__textbox {
     width: 58%;
-    margin-right: 7.5rem;
+    padding-right: 4.5rem;
+
+    @include for-desktop-xxl {
+      padding-right: .5rem;
+    }
+
+    @include for-tablet-landscape-lg {
+      width: 100%;
+      padding-right: 3rem;
+    }
+
+    @include for-phone-landscape-sm {
+      padding-right: 0;
+    }
+  }
+
+  &__staff:not(:first-child) {
+    @include for-phone-landscape-sm {
+      height: 24rem;
+    }
   }
 
   &__staffgroup {
@@ -30,90 +93,385 @@
     padding-right: 6rem;
     display: flex;
     justify-content: space-between;
+    gap: 3rem;
+
+    @include for-tablet-landscape-lg {
+      display: block;
+
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
   }
 
   &__module {
-    
+
     position: relative;
     width: 26.4rem;
 
+    @include for-tablet-landscape-lg {
+      width: 100%;
+      padding-top: 4.6rem;
+      margin-bottom: 22rem;
+    }
+
+    @include for-tablet-portrait-md {
+      margin-bottom: 20rem;
+    }
+
+    @include for-phone-landscape-sm {
+      margin-bottom: 14rem;
+    }
+
     &:nth-child(1) {
       margin-top: 11.6rem;
-      padding-right: 7rem;
+
+      @include for-laptop-desktop-xl {
+        margin-top: 14.6rem;
+      }
+
+      @include for-tablet-landscape-lg {
+        margin-top: 0;
+      }
     }
+
     &:nth-child(2) {
       margin-top: .9rem;
-      padding-right: 3rem;
+      margin-left: -8rem;
+
+      @include for-tablet-landscape-lg {
+        margin-top: 0;
+        margin-left: 0;
+      }
     }
+
     &:nth-child(3) {
-      margin-top: 1.9rem;
+      margin-top: 0.9rem;
+      margin-right: -8rem;
+
+      @include for-tablet-landscape-lg {
+        margin-top: 0;
+        margin-right: 0;
+      }
+
     }
+
     &:nth-child(4) {
       margin-top: 13.4rem;
+      margin-right: -6rem;
+
+      @include for-tablet-landscape-lg {
+        margin-top: 0;
+        margin-right: 0;
+      }
     }
+
+    @include for-tablet-landscape-lg {
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        padding-right: 41%;
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        padding-left: 41%;
+      }
+    }
+
 
     & h3 {
       @include font (700, 1.8rem, 110%);
       color: var(--color-zag);
       margin-bottom: 1.5rem;
     }
+
     & p {
       @include font (400, 1.4rem, 110%);
       color: var(--color-text);
     }
   }
 
-  &__arrow {
-    position: absolute;
-  }
-
   &__foto {
     position: relative;
+    margin: 0 auto;
+    max-width: 108rem;
+    width: 64%;
     display: flex;
-    align-items:end;
-    margin-top: -5rem;
-    justify-content: center;
+    align-items: end;
+    margin-top: -8rem;
+    justify-content: space-between;
+
+    @include for-laptop-desktop-xl {
+      margin-top: 1rem;
+      width: 70%;
+    }
+
+    @include for-tablet-landscape-lg {
+      padding: 2rem;
+      position: absolute;
+      width: 100%;
+      top: 32rem;
+      left: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 6rem;
+    }
+
+    @include for-phone-landscape-sm {
+      gap: 5rem;
+      margin-top: 3rem;
+    }
   }
 
   &__foto-item {
-    &:nth-child(1) {
-      margin-left: -23rem;
+    position: relative;
+    overflow: visible;
+
+    & img {
+      overflow: visible;
+      height: 36rem;
+      object-fit: cover;
+
+      @include for-laptop-desktop-xl {
+        height: 31rem;
+      }
+
+      @include for-tablet-landscape-lg {
+        height: 27rem;
+      }
+
     }
-    &:nth-child(2) {
-      margin-left: -4rem;
-    }
+
+    &:nth-child(1),
     &:nth-child(3) {
-      margin-left: -3rem;
       z-index: 10;
     }
+
+    &:nth-child(2),
     &:nth-child(4) {
+      @include for-tablet-landscape-lg {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+
+    & .arrow img {
       position: absolute;
-      right: 23rem;
-      bottom: 0;
+      width: 7rem;
+      height: 6rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      flex-shrink: 0;
+      display: block;
+
+      @include for-tablet-portrait-md {
+        display: none;
+      }
+
+      @include for-phone-landscape-sm {
+        display: block;
+      }
+    }
+
+    &:nth-child(1) .arrow img {
+      width: 10.3rem;
+      height: 4.3rem;
+      top: 10rem;
+      left: -2rem;
+
+
+      @include for-laptop-desktop-xl {
+        top: 5rem;
+        left: -3rem;
+      }
+
+      @include for-tablet-portrait-md {
+        top: 10rem;
+        left: -3rem;
+
+      }
+
+      @include for-phone-landscape-sm {
+        top: 14rem;
+        left: -5rem;
+      }
+    }
+
+    &:nth-child(2) .arrow img {
+      width: 3.7rem;
+      height: 8.8rem;
+      top: -9rem;
+      left: 17rem;
+
+      @include for-laptop-desktop-xl {
+        top: -12rem;
+        left: 12rem;
+      }
+
+      @include for-tablet-landscape-lg {
+        top: 7rem;
+        left: 28rem;
+        transform: rotate(45deg);
+      }
+
+      @include for-tablet-portrait-md {
+        top: 9rem;
+        left: 27rem;
+      }
+
+      @include for-phone-landscape-sm {
+        top: 12rem;
+        left: 26rem;
+      }
+    }
+
+    &:nth-child(3) .arrow img {
+      width: 5.4rem;
+      height: 10.3rem;
+      top: -10rem;
+      left: 4rem;
+
+      @include for-laptop-desktop-xl {
+        top: -13rem;
+        left: 10rem;
+      }
+
+      @include for-tablet-landscape-lg {
+        transform: rotate(279deg);
+        top: 9rem;
+        left: -12rem;
+      }
+
+      @include for-tablet-portrait-md {
+        top: 9rem;
+        left: -10rem;
+      }
+    }
+
+    &:nth-child(4) .arrow img {
+      width: 10.3rem;
+      height: 4.3rem;
+      top: 9rem;
+      left: auto;
+      right: -10rem;
+
+      @include for-laptop-desktop-xl {
+        top: -2rem;
+        right: -13rem;
+      }
+
+      @include for-tablet-landscape-lg {
+        top: 15rem;
+        right: -18rem;
+      }
+
+      @include for-tablet-portrait-md {
+        top: 12rem;
+        right: -18rem;
+      }
+
+      @include for-phone-landscape-sm {
+        top: 10rem;
+        right: -17rem;
+      }
     }
   }
-
-}
-#a1 {
-  width: 10.3rem;
-  bottom: -6rem;
-  right: 0rem;
 }
 
-#a2 {
-  width: 3.7rem;
-  bottom: 3.7rem;
-  right: 1rem;
+@media (max-width: 29.375em) {
+  .learning__textbox {
+    margin-top: 2.2rem;
+  }
+
+  .learning__foto {
+    margin-top: 8.2rem;
+    gap: 7rem;
+    padding: 0;
+  }
 }
 
-#a3 {
-  width: 5.3rem;
-  bottom:-0.5rem;
-  left: -5rem;
+
+@media (max-width: 25em) {
+  .learning__foto {
+
+    gap: 19rem;
+    padding: 1rem;
+    margin-top: 11.2rem;
+  }
+
+  .learning__staffgroup {
+    margin-bottom: 29rem;
+  }
+
+  .learning__module {
+    margin-bottom: 24rem;
+
+  }
+
+  .learning__foto-item:nth-child(1) {
+    top: 4rem;
+  }
+
+  .learning__foto-item:nth-child(3) {
+    top: -6rem;
+  }
+
+  .learning__foto-item:nth-child(4) {
+    top: -11rem;
+  }
+
+  .learning__foto-item:nth-child(1) .arrow img {
+    top: 3rem;
+    left: -1rem;
+  }
+
+  .learning__foto-item:nth-child(2) .arrow img {
+    top: -3rem;
+    left: 19rem;
+  }
+
+  .learning__foto-item:nth-child(3) .arrow img {
+    top: -1rem;
+    left: -5rem;
+  }
+
+  .learning__foto-item:nth-child(4) .arrow img {
+    top: -1rem;
+    left: 19rem;
+  }
+
+  .learning__module:nth-child(4) {
+    margin-bottom: 20rem;
+  }
+
+  .learning__module:nth-child(2),
+  .learning__module:nth-child(4) {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .learning__module:nth-child(1),
+  .learning__module:nth-child(3) {
+    width: 100%;
+    padding-right: 0;
+  }
 }
 
-#a4 {
-  width: 10.3rem;
-  bottom: -6rem;
-  right: 18rem;
+@media (max-width: 23.75em) {
+  .learning__foto {
+
+    gap: 20rem;
+    padding: 1rem;
+    margin-top: 16.2rem;
+
+  }
+}
+
+@media (max-width: 21.44em) {
+  .learning__foto {
+    gap: 20rem;
+    padding: 1rem;
+    margin-top: 22.2rem;
+  }
 }

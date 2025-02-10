@@ -5,10 +5,12 @@ header.header
             img.header__logo-burger(src="img/logo.svg", alt="Med Beauty logo")
 
             nav#header_links
+                a.header__burger-item(id="testdrive-item" onclick="TestDriveFn()") Test-drive
                 a.header__burger-item(href="#") О нас 
                 a.header__burger-item(href="#") Оборудование
                 a.header__burger-item(href="#") Академия
                 a.header__burger-item(href="#") Консалтинг
+                a.header__burger-item(id="questions-item" onclick="questionsFn()") FAQ
                 a.header__burger-item(href="#") Контакты
 
             button.header__form-btn.button__sub(type="button") Связаться
@@ -20,15 +22,13 @@ header.header
         h2.form__title.title Остались вопросы?
 
         label(for="name") 
-            input#name.form__input(type="text", name="name", placeholder="Ваше имя", maxlength="35")
-            //- img(src="img/form_pers.svg")
+            input.form__input(type="text", name="name", id="name", placeholder="Ваше имя", maxlength="35")
 
         label(for="phone")
-            input#phone.form__input.tel-selector(type="tel", name="phone", placeholder="Ваш телефон")
-            //- img(src="img/form_call.svg")
+            input.form__input.tel-selector(type="tel", name="phone", id="phone", placeholder="Ваш телефон")
 
         label(for="question")
-            textarea#question.form__input(type="text", name="question" placeholder="Здесь будет Ваш вопрос" maxlength="1500")
+            textarea.form__input(name="question", id="question", placeholder="Здесь будет Ваш вопрос" maxlength="1500")
 
         input.form__check(type="checkbox", id="agree")
         label.form__check-label(for="agree") Я даю согласие на обработку персольных данных в соответствии с политикой конфиденциальности и условием пользования
@@ -38,8 +38,7 @@ header.header
 
     .container
         .header__top
-            a.header__logo(href="#")
-                img(src="img/logo.svg", alt="Med Beauty logo")
+            img.header__logo(src="img/logo.svg", alt="Med Beauty logo")
 
             .header__between
             .header__wrapper
@@ -49,6 +48,16 @@ header.header
                     a.header__menu-item(id="learning-item" onclick="learningFn()") Обучение                
                     a.header__menu-item(id="trust-item" onclick="trustFn()") Доверие
                     a.header__menu-item(id="questions-item" onclick="questionsFn()") FAQ
+                    
+                    button.header__chose-lang(type="button")
+                        span RU 
+                        span
+                            img(src="img/arrdown.svg", alt="стрелка вниз")
 
+                        .header__randome
+                            p.header__randome-it(onclick="listener(event)") HE
+                            p.header__randome-it(onclick="listener(event)") AR
+                            p.header__randome-it(onclick="listener(event)") EN
+                            
                 button.header__burger-btn(type="button") 
                     img(src="img/burger.svg", alt="дополнительное меню")

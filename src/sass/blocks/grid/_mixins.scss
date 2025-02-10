@@ -117,9 +117,3 @@
         @content;
     }
 }
-
-@mixin for-desktop-xxxl {
-    @media (max-width: 100em) {
-        @content;
-    }
-}

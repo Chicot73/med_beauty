@@ -1,5 +1,9 @@
 .more {
 
+  @include for-tablet-portrait-md {
+    margin-bottom: 10rem;
+  }
+
   &__wrapper {
     display: flex;
     opacity: .99;
@@ -7,12 +11,28 @@
     backdrop-filter: blur(7.6rem);
     border: 0.2rem solid #2f2f2f;
     border-radius: 3rem;
+
+    @include for-tablet-landscape-lg {
+      display: block;
+    }
+  }
+
+  aside.video.more__video {
+    margin-bottom: 3rem;
+
+    @include for-tablet-landscape-lg {
+      margin-bottom: 0rem;
+    }
   }
 
   &__form {
-      width: 45%;
-      max-width:none;
-      transform: scale(1.005);
+    width: 45%;
+    max-width: none;
+    transform: scale(1.005);
+
+    @include for-tablet-portrait-md {
+      width: 100%;
+    }
   }
 
   &__video {
@@ -21,6 +41,18 @@
     padding: 4rem;
     background-color: rgba(20, 21, 25, 0.24);
     backdrop-filter: blur(7.6rem);
+
+    @include for-tablet-portrait-md {
+      width: 100%;
+      padding: 2rem;
+    }
   }
 }
 
+form h2 #more_video.video__title.title {
+  font-size: 12vw;
+}
+
+aside h2 #more_form.form__title.title {
+  font-size: 12vw;
+}

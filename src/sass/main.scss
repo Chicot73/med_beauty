@@ -101,6 +101,8 @@ picture {
     width: 100%;
     height: auto;
     object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 html,
@@ -121,17 +123,40 @@ body {
     // color: var(--color-text);
 }
 
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-text) !important;
+    -webkit-box-shadow: 0 0 0px 40rem #26252A inset !important;
+    border: .2rem solid #A9A9A9 !important;
+    border-radius: 1.5rem !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--color-text) !important;
+    -webkit-box-shadow: 0 0 0px 40rem #26252A inset !important;
+    border: .2rem solid #373737 !important;
+    border-radius: 1.5rem !important;
+}
+
 body {
+    // background: #141519;
     background: #141519;
     position: relative;
     height: 100%;
     padding-bottom: 29rem;
+
+    @include for-tablet-landscape-lg {
+        padding-bottom: 43rem;
+    }
+
+    @include for-phone-landscape-sm {
+        padding-bottom: 66rem;
+    }
 }
 
-html,
-body {
-    font-size: 10px;
-    margin: 0;
+main {
+    overflow: hidden;
 }
 
 .row {
@@ -141,4 +166,21 @@ body {
 
 .container {
     position: relative;
+
+    @include for-tablet-portrait-md {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    @include for-phone-landscape-sm {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 25em) {
+
+    html,
+    body {
+        font-size: 0.625em !important;
+    }
 }

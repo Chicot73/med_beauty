@@ -1,6 +1,7 @@
 //Контейнер
 .container {
     @include make-max-width-container();
+    
 }
 
 //Ряд

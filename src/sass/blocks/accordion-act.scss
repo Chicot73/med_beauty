@@ -20,6 +20,52 @@
       opacity: 1;
     }
   }
+
+  @include for-tablet-portrait-md {
+    opacity: 1;
+    margin-top: 1.5rem;
+    visibility: visible;
+
+    animation: actp .2s ease-out;
+
+    @keyframes actp {
+
+      from {
+        margin-top: -5.7rem;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      to {
+        margin-top: 1.5rem;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  @include for-phone-landscape-sm {
+    opacity: 1;
+    margin-top: 1.5rem;
+    visibility: visible;
+
+    animation: actp .2s ease-out;
+
+    @keyframes actp {
+
+      from {
+        margin-top: -8rem;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      to {
+        margin-top: 1.5rem;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 #block-act--out {
@@ -27,23 +73,66 @@
   opacity: 0;
   visibility: hidden;
   margin-top: -3.7rem;
-
   animation: actp2 .2s ease-out;
-  
+
+  @keyframes actp2 {
+
+    from {
+      margin-top: 1.5rem;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    to {
+      margin-top: -3.7rem;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  @include for-tablet-portrait-md {
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -5.7rem;
+    animation: actp2 .2s ease-out;
+
     @keyframes actp2 {
-  
+
       from {
         margin-top: 1.5rem;
         visibility: visible;
         opacity: 1;
       }
-  
+
       to {
-        margin-top: -3.7rem;
+        margin-top: -5.7rem;
         visibility: hidden;
         opacity: 0;
       }
     }
+  }
+
+  @include for-phone-landscape-sm {
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -8rem;
+    animation: actp2 .2s ease-out;
+
+    @keyframes actp2 {
+
+      from {
+        margin-top: 1.5rem;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      to {
+        margin-top: -8rem;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
 }
 
 .mark {
