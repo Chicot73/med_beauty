@@ -14,16 +14,15 @@
   @include for-phone-landscape-sm {
     font-size: 11.2vw;
     margin-bottom: 3rem;
-    letter-spacing: 0.03em;
+    letter-spacing: -0.04em;
   }
 }
 
-// @media (max-width: 25em) {
-//   .title {
-//     font-size: 11.2vw;
-//     margin-bottom: 3rem;
-//   }
-// }
+@media (max-width: 25em) {
+  .title {
+    letter-spacing: 0.04em;
+  }
+}
 
 .maintext {
   @include font (400, 1.8rem, 140%);

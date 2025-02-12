@@ -81,14 +81,12 @@
 
   &__part2 {
     width: 50%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    // padding-left: 3rem;
+    // padding-right: 3rem;
     position: relative;
-    // height: 89rem;
 
     @include for-tablet-portrait-md {
-      // width: 56rem;
-      // width: 62rem;
+
       width: 89vw;
       padding: 0;
     }

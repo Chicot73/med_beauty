@@ -30,7 +30,7 @@
     max-width: none;
     transform: scale(1.005);
 
-    @include for-tablet-portrait-md {
+    @include for-tablet-landscape-lg {
       width: 100%;
     }
   }
@@ -42,7 +42,7 @@
     background-color: rgba(20, 21, 25, 0.24);
     backdrop-filter: blur(7.6rem);
 
-    @include for-tablet-portrait-md {
+    @include for-tablet-landscape-lg {
       width: 100%;
       padding: 2rem;
     }

@@ -136,7 +136,6 @@ main
                         li Заключение договора и оплата
                         li Разработка стратегии и&nbsp;прохождение обучения
                         li Ввод оборудования в&nbsp;эксплуатацию и техническое сопровождение
-                        li.decisions__line
 
     article#learning.learning
         .container
@@ -323,19 +322,25 @@ main
     article.more
         .container
             .more__wrapper
-                form#form-down.more__form.form(action="#", method="POST")
-                    h2#more_form.form__title.title Остались вопросы?
+                form#form-down.more__form.form(action="#", method="POST", onsubmit="submitForm(event)")
+                    h2#more_form.form__title Остались вопросы?
 
-                    label(for="name-f")
-                        input.form__input(type="text", form="form", name="name-f", id="name-f", placeholder="Ваше имя")
+                    label#label1-f(for="name-f")
+                        .form__imglab
+                            img(src="img/form_call.svg", alt="name")
 
-                    label(for="phone-f")
-                        input.form__input.tel-selector(type="tel", form="form",name="phone-f", id="phone-f", placeholder="Ваш телефон")
+                        input.form__input(type="text", form="form", name="name_f", id="name-f", placeholder="Ваше имя")
+
+                    label#label2-f(for="phone-f")
+                        .form__imglab
+                            img(src="img/form_pers.svg", alt="name")
+
+                        input.form__input.tel-selector(type="tel", form="form",name="phone_f", id="phone-f", placeholder="Ваш телефон")
 
                     label(for="question-f")
-                        textarea.form__input(form="form", name="question-f", id="question-f",  placeholder="Здесь будет Ваш вопрос" maxlength="1500")
+                        textarea.form__input(form="form", name="question_f", id="question-f",  placeholder="Здесь будет Ваш вопрос" maxlength="1500")
 
-                    input.form__check(type="checkbox", form="form", id="agree-f")
+                    input.form__check(type="checkbox", form="form", name="agree_f", id="agree-f")
                     label.form__check-label(for="agree-f") Я даю согласие на обработку персольных данных в соответствии с политикой конфиденциальности и условием пользования
                     p#warning-f.form__confirm Пожалуйста дайте свое согласие на обработку персональных данных
 

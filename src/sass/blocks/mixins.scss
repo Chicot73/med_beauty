@@ -13,8 +13,8 @@
     line-height: $height; //интерлиньяж
     font-family: 'Gilroy';
     letter-spacing: 0.06em;
-        text-transform: uppercase;
-        //@include zag (400, 1.4rem, 115%);
+    text-transform: uppercase;
+    //@include zag (400, 1.4rem, 115%);
 }
 
 @mixin vert-c {

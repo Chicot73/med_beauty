@@ -18,10 +18,10 @@ header.header
         button.header__cross(type="button") 
             img(src="img/cross.svg", alt="закрыть дополнительное меню")
 
-    form#form.header__form.form(action="#", method="POST")
-        h2.form__title.title Остались вопросы?
+    form#form.header__form.form(action="#", method="POST", onsubmit="submitForm(event)")
+        h2.form__title Остались вопросы?
 
-        label(for="name") 
+        label#label1(for="name") 
             input.form__input(type="text", name="name", id="name", placeholder="Ваше имя", maxlength="35")
 
         label(for="phone")
@@ -30,7 +30,7 @@ header.header
         label(for="question")
             textarea.form__input(name="question", id="question", placeholder="Здесь будет Ваш вопрос" maxlength="1500")
 
-        input.form__check(type="checkbox", id="agree")
+        input.form__check(type="checkbox", name="agree", id="agree")
         label.form__check-label(for="agree") Я даю согласие на обработку персольных данных в соответствии с политикой конфиденциальности и условием пользования
         p#warning.form__confirm Пожалуйста дайте свое согласие на обработку персональных данных
 
