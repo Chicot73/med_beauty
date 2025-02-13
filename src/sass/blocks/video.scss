@@ -22,6 +22,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+
+    @include for-phone-landscape-sm {
+      width: 5rem;
+      height: 5rem;
+    }
   }
 }
-

@@ -146,43 +146,40 @@ main
                 
                 .learning__staffgroup
                     #learn_module01.learning__module
-                        h3.learning__title-inc Новичкам в индустрии красоты
+                        h3.learning__title-inc Новичкам в&nbsp;индустрии красоты
                         p.learning__desc которые хотят получить фундаментальные знания и&nbsp;практические навыки работы с&nbsp;оборудованием
+
+                        .learning__foto-item
+                            img.learning__staff(src="img/learning_1.png", alt="Персонал 1", loading="lazy")
+                            .arrow#a1
+                                img(src="img/learnarr_1.svg", alt="")
 
                     #learn_module02.learning__module
                         h3.learning__title-inc Опытным косметологам и&nbsp;врачам
                         p.learning__desc желающим расширить спектр предоставляемых услуг, освоить современные технологии и повысить квалификацию
 
+                        .learning__foto-item
+                            img.learning__staff(src="img/learning_2.png", alt="Персонал 2", loading="lazy")
+                            .arrow#a2
+                                img(src="img/learnarr_2.svg", alt="")
+
                     #learn_module03.learning__module
                         h3.learning__title-inc Владельцам клиник<br>и салонов красоты
                         p.learning__desc cтремящимся внедрить новые процедуры, освоить передовые методики и улучшить качество услуг
 
+                        .learning__foto-item
+                            img.learning__staff(src="img/learning_3.png", alt="Персонал 3", loading="lazy")
+                            .arrow#a3
+                                img(src="img/learnarr_3.svg", alt="")
+
                     #learn_module04.learning__module
                         h3.learning__title-inc Бизнес инвесторам
-                        p.learning__desc Вы узнаете, как выбирать оборудование, оценивать рентабельность, масштабировать успешный бизнес при минималица
-                        
-                        
-                .learning__foto
-                    .learning__foto-item
-                        img.learning__staff(src="img/learning_1.png", alt="Персонал 1", loading="lazy")
-                        .arrow#a1
-                            img(src="img/learnarr_1.svg", alt="")
+                        p.learning__desc Вы узнаете, как выбирать оборудование, оценивать рентабельность, масштабировать успешный бизнес при минимальных вложениях
 
-                    .learning__foto-item
-                        img.learning__staff(src="img/learning_2.png", alt="Персонал 2", loading="lazy")
-                        .arrow#a2
-                            img(src="img/learnarr_2.svg", alt="")
-
-                    .learning__foto-item
-                        img.learning__staff(src="img/learning_3.png", alt="Персонал 3", loading="lazy")
-                        .arrow#a3
-                            img(src="img/learnarr_3.svg", alt="")
-
-                    .learning__foto-item
-                        img.learning__staff(src="img/learning_4.png", alt="Персонал 4", loading="lazy")
-                        .arrow#a4
-                            img(src="img/learnarr_4.svg", alt="")
-                        
+                        .learning__foto-item
+                            img.learning__staff(src="img/learning_4.png", alt="Персонал 4", loading="lazy")
+                            .arrow#a4
+                                img(src="img/learnarr_4.svg", alt="")
 
     article#trust.trust
         .container
@@ -340,11 +337,11 @@ main
                     label(for="question-f")
                         textarea.form__input(form="form", name="question_f", id="question-f",  placeholder="Здесь будет Ваш вопрос" maxlength="1500")
 
-                    input.form__check(type="checkbox", form="form", name="agree_f", id="agree-f")
+                    input.form__check(type="checkbox", form="form", name="agree_f", id="agree-f", value="Я даю согласие на обработку моих персональных данных")
                     label.form__check-label(for="agree-f") Я даю согласие на обработку персольных данных в соответствии с политикой конфиденциальности и условием пользования
                     p#warning-f.form__confirm Пожалуйста дайте свое согласие на обработку персональных данных
 
-                    button.form__btn.button__sub(type="submit") Связаться
+                    button.form__btn.button__sub(type="button") Связаться
 
                 aside.video.more__video
                     h2#more_video.video__title.title Видео о&nbsp;нашей компании

@@ -18,23 +18,29 @@ header.header
         button.header__cross(type="button") 
             img(src="img/cross.svg", alt="закрыть дополнительное меню")
 
-    form#form.header__form.form(action="#", method="POST", onsubmit="submitForm(event)")
+    form#form.header__form.form(action="#", method="POST")
         h2.form__title Остались вопросы?
 
-        label#label1(for="name") 
+        label#label1(for="name")
+            .form__imglab
+                img(src="img/form_call.svg", alt="name")
+
             input.form__input(type="text", name="name", id="name", placeholder="Ваше имя", maxlength="35")
 
-        label(for="phone")
+        label#label2(for="phone")
+            .form__imglab
+                img(src="img/form_pers.svg", alt="name")
+            
             input.form__input.tel-selector(type="tel", name="phone", id="phone", placeholder="Ваш телефон")
 
         label(for="question")
             textarea.form__input(name="question", id="question", placeholder="Здесь будет Ваш вопрос" maxlength="1500")
 
-        input.form__check(type="checkbox", name="agree", id="agree")
+        input.form__check(type="checkbox", name="agree", id="agree", value="Я даю согласие на обработку моих персональных данных")
         label.form__check-label(for="agree") Я даю согласие на обработку персольных данных в соответствии с политикой конфиденциальности и условием пользования
         p#warning.form__confirm Пожалуйста дайте свое согласие на обработку персональных данных
 
-        button.form__btn.button__sub(type="submit") Связаться
+        button.form__btn.button__sub(type="button") Связаться
 
     .container
         .header__top

@@ -292,7 +292,7 @@ function moreFn() {
 
 
 
-// бургер - меню
+// бургер-меню
 
 let burgerMenu = document.querySelector('.header__burger'),
   burgerBtn = document.querySelector('.header__burger-btn'),
@@ -369,6 +369,18 @@ document.addEventListener('click', (e) => {
       upForm.style.display = 'none';
       closeBurger();
     }
+
+    // document.addEventListener('click', (e) => {
+
+
+    // })
+
+    // if (noFieldForm) {
+
+    //   // Логика после открытия формы, если хотят закрыть его, нажав на пустое пространство вне формы
+
+    //   closeBurger();
+    // }
   }
 })
 
@@ -377,21 +389,37 @@ document.addEventListener('click', (e) => {
 
 
 
+
+// let puArr = [burgerCloseBtn, burgerLinks].forEach(item => {
+//   item.addEventListener('click', (e) => {
+//     burgerMenu.classList.remove('header__burger--in');
+//     headerCover.style.display = 'none';
+//     body.style.overflow = 'scroll';
+//     e.stopImmediatePropagation();
+//   });
+// });
+
+
+
+
+
 ///////////////////
 
-// форма отправки и валидация
+// верхняя форма
 
-
-
-// document.addEventListener('click', (e) => {
-
+let FormBtn = document.querySelectorAll('.form__btn');
 
 let f_formSucess = false;
-let f_submit = false;
+
+
+//Маска формы
 
 let telSelector = document.getElementById('phone'),
   nameSelector = document.getElementById('name'),
-  questionSelector = document.getElementById('question');
+  questionSelector = document.getElementById('question'),
+  telSelectorDown = document.getElementById('phone-f'),
+  nameSelectorDown = document.getElementById('name-f'),
+  questionSelectorDown = document.getElementById('question-f');
 
 // Inputmask({ "mask": "+9[99](9[9999])[9[9999]]-[9[9999]]", "greedy": "false" }).mask(telSelector);
 // Inputmask({ "mask": "+9{1,20}/(/)/.-", "greedy": "false" }).mask(telSelectorDown);
@@ -410,36 +438,33 @@ telValid.mask(telSelector); //применяем сформированную м
 
 
 
-let validForm = function (e) {
-
+let validForm = function () {
 
   let long = telSelector.value,
     long2 = nameSelector.value,
     long3 = questionSelector.value;
+  long4 = telSelectorDown.value;
+  long5 = nameSelectorDown.value;
+  long6 = questionSelectorDown.value;
   let longNum = long.replace(/[^0-9]/g, ""); //удаляем из строки всё, кроме цифр  // ошибка из-за этого
+  let longNum2 = long4.replace(/[^0-9]/g, "");
 
-  if ((document.getElementById('agree').checked)) {
+  if ((document.getElementById('agree').checked) || (document.getElementById('agree-f').checked)) {
 
-    if (((longNum.length > 2) && (longNum.length < 50)) && ((long2.length > 1) && (long2.length < 36)) && ((long3.length > 2) && (long3.length < 1501))) {
+    if ((((longNum.length > 2) && (longNum.length < 50)) && ((long2.length > 1) && (long2.length < 36)) && ((long3.length > 2) && (long3.length < 1501))) || (((longNum2.length > 2) && (longNum2.length < 50)) && ((long5.length > 1) && (long5.length < 36)) && ((long6.length > 2) && (long6.length < 1501)))) {
 
       document.getElementById('warning').style.display = "block";
+      document.getElementById('warning-f').style.display = "block";
       document.getElementById('warning').style.color = "#49ff0c";
+      document.getElementById('warning-f').style.color = "#49ff0c";
       document.getElementById('warning').textContent = "Спасибо, мы свяжемся с Вами!";
+      document.getElementById('warning-f').textContent = "Спасибо, мы свяжемся с Вами!";
 
-      function f_formSucess() {
-
-        upForm.submit(e);
-
-        sendForm(e); /////////////////////////////////////////////////// ОТПРАВКА ФОРМЫ!!! \\\\\\\\\\\\\\\\\
-
-        f_submit = true;
-
-        closeBurger();
-
+      function delText() {
         document.getElementById('warning').style.display = "none";
-
+        document.getElementById('warning-f').style.display = "none";
       }
-      setTimeout(f_formSucess, 2000);
+      setTimeout(delText, 2000);
 
       function goodby() {
 
@@ -460,7 +485,9 @@ let validForm = function (e) {
 
 
       document.getElementById('warning').textContent = "Пожалуйста введите правильные данные";
+      document.getElementById('warning-f').textContent = "Пожалуйста введите правильные данные";
       document.getElementById('warning').style.display = "block";
+      document.getElementById('warning-f').style.display = "block";
 
     }
   } else {
@@ -468,61 +495,58 @@ let validForm = function (e) {
     console.log('форма не прошла по валидации');
 
     document.getElementById('warning').textContent = "Пожалуйста дайте свое согласие на обработку персональных данных";
+    document.getElementById('warning-f').textContent = "Пожалуйста дайте свое согласие на обработку персональных данных";
     document.getElementById('warning').style.display = "block";
+    document.getElementById('warning-f').style.display = "block";
   }
-}
-
-let sendForm = function () {
-
-
-  document.addEventListener('submit', (e) => {
-
-    e.preventDefault;
-
-    // validForm(e);
-
-    if (f_formSucess === true) {
-
-      const sendForm = (data) => {
-
-        return fetch('finish.php', {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8'
-          }
-        }).then(res => res.json());
-      };
-
-      const dataForm = new FormData(e.target);
-      const user = {};
-
-      dataForm.forEach((val, key) => {
-        user[key] = val;
-      });
-      sendForm(user).then(data => {
-        console.log('Письмо ушло'); //здесь вставлять сообщение об успешной отсылке
-      });
-
-      e.target.reset(); //обнуляет форму
-
-      f_formSucess = false;
-    }
-  })
 }
 
 document.addEventListener('click', (e) => {
 
-  let formRequest = e.target.closest('.form__btn');
+  const target = e.target.closest('.form__btn');
 
-  if (formRequest) {
+  if (target) {
 
-    validForm(e);
+    closeBurger();
 
+    validForm();
   }
 })
 
+const form = document.getElementById('#form');
+
+const sendFormTo = (data) => {
+  return fetch('../finish.php', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8'
+    }
+  }).then(res => res.json());
+}
+
+let submitForm = function (event) {
+
+  event.preventDefault();
+
+  console.log('submit');
 
 
+  if (f_formSucess === true) {
 
+    const dataForm = new FormData(form);
+    const user = {};
 
+    dataForm.forEach((val, key) => {
+      user[key] = val;
+    });
+
+    sendFormTo(user).then(data => {
+      console.log('Письмо отправлено успешно');
+
+      form.reset();
+
+      f_formSucess = false;
+    })
+  }
+}

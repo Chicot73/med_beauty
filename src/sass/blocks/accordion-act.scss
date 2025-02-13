@@ -135,6 +135,102 @@
   }
 }
 
+@media (max-width: 25em) {
+
+  #block-act--in {
+    opacity: 1;
+    margin-top: 1.5rem;
+    visibility: visible;
+
+    animation: actp .2s ease-out;
+
+    @keyframes actp {
+
+      from {
+        margin-top: -10rem;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      to {
+        margin-top: 1.5rem;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  #block-act--out {
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -10rem;
+    animation: actp2 .2s ease-out;
+
+    @keyframes actp2 {
+
+      from {
+        margin-top: 1.5rem;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      to {
+        margin-top: -10rem;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 23.75em) {
+
+  #block-act--in {
+    opacity: 1;
+    margin-top: 1.5rem;
+    visibility: visible;
+
+    animation: actp .2s ease-out;
+
+    @keyframes actp {
+
+      from {
+        margin-top: -14rem;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      to {
+        margin-top: 1.5rem;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  #block-act--out {
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -14rem;
+    animation: actp2 .2s ease-out;
+
+    @keyframes actp2 {
+
+      from {
+        margin-top: 1.5rem;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      to {
+        margin-top: -14rem;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+}
+
 .mark {
   overflow: auto;
 }

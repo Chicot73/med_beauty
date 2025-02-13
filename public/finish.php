@@ -14,6 +14,7 @@ $phoneF = $obj['phone_f'];
 $question = $obj['question'];
 $questionF = $obj['question_f'];
 $agree = $obj['agree'];
+$agreeF = $obj['agree-f'];
 
 // Формирование самого письма
 $title = "Новый контакт".$name.$nameF;
@@ -30,7 +31,7 @@ $body = "<h2>Новый контакт на Landing page</h2>
     <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>Вопрос клиента: </b>$question $questionF</td>
   </tr>
   <tr style='background-color: #ffffff;'>
-    <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$agree</b></td>
+    <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$agree $agreeF</b></td>
   </tr>";
 $body = "<table style='width: 100%;'>$body</table>";
 
@@ -47,7 +48,7 @@ try {
 // Настройки вашей почты
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
   $mail->Username   = 'igorbob73@gmail.com'; // Логин на почте
-  $mail->Password   = 'lreqgdhqfazzccob'; // Пароль 
+  $mail->Password   = 'aozrcvztnjanepif'; // Пароль
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
