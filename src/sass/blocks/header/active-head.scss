@@ -1,18 +1,15 @@
 #acthead {
-  background-color: #141519;
-  backdrop-filter: blur(.1);
+  background-color: rgba(20, 21, 25, .65);
   animation: header .7s ease-out;
 
   @keyframes header {
 
     from {
-      background-color: #151322;
-      backdrop-filter: blur(1);
+      background-color: rgba(20, 18, 31, 0.65);
     }
 
     to {
-      background-color: #141519;
-      backdrop-filter: blur(.1);
+      background-color: rgba(20, 21, 25, .65);
     }
   }
 }

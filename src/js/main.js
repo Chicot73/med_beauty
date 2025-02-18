@@ -11,15 +11,15 @@ function alertStart() {
 
 }
 
-let header = document.querySelector('.header');
+let headerBack = document.querySelector('.header__back');
 
 function headerSticky() {
 
   function r1() {
-    header.setAttribute("id", "acthead");
+    headerBack.setAttribute("id", "acthead");
   }
 
-  setTimeout(r1, 1000);
+  setTimeout(r1, 100);
 
 }
 
