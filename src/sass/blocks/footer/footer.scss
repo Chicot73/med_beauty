@@ -190,7 +190,7 @@
       font: 700 1.6rem / 110% "Gilroy";
     }
 
-    @include for-tablet-portrait-md {
+    @include for-phone-landscape-sm {
       text-align: left;
     }
 
@@ -204,7 +204,7 @@
     text-align: right;
     margin-bottom: 2rem;
 
-    @include for-tablet-portrait-md {
+    @include for-phone-landscape-sm {
       text-align: left;
     }
   }
@@ -225,7 +225,7 @@
 
     @include for-desktop-xxl {
       margin-bottom: 1.5rem;
-      width: 21%;
+      width: 22%;
       height: 5rem;
     }
 
@@ -264,7 +264,7 @@
 
   &__socials {
 
-    width: 10.2rem;
+    width: 100%;
     align-self: flex-start;
 
     @include for-laptop-desktop-xl {
@@ -279,7 +279,7 @@
       flex-shrink: 0;
       margin-left: 0;
       margin-right: auto;
-      width: 11rem;
+      width: 13rem;
     }
 
     & a {

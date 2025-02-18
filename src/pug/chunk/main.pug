@@ -104,7 +104,12 @@ main
                         .slider__btn-prev
                             img(src="img/arrow.svg", alt="влево")
 
-    article#testdrive.test-drive
+    #testdrive
+    <br>
+    <br>
+    <br>
+    <br>
+    article.test-drive
         .container
             .test-drive__wrapper
                 .test-drive__part1
@@ -117,9 +122,9 @@ main
                         li Консультация эксперта для подбора технологии конкретно под ваш бизнес
                         li Оценить возможность субсидирования вашего проекта
                     
-                    button.test-drive__toform.button__sub(type="button") Подробнее
+                    button#decisions.test-drive__toform.button__sub(type="button") Подробнее
 
-    article#decisions.decisions
+    article.decisions
         .container
             .decisions__wrapper
                 .decisions__part1
@@ -136,12 +141,16 @@ main
                         li Заключение договора и оплата
                         li Разработка стратегии и&nbsp;прохождение обучения
                         li Ввод оборудования в&nbsp;эксплуатацию и техническое сопровождение
-
-    article#learning.learning
+    #learning
+    <br>
+    <br>
+    <br>
+    <br>
+    article.learning
         .container
             .learning__border
                 .learning__wrapper
-                    h2#learn_h2.learning__title.title Академия<br>Med Beauty
+                    h2#learn_h2.learning__title.title Академия Med Beauty
                     p#learn_p.maintext.learning__textbox Обучение работе с&nbsp;оборудованием для&nbsp;косметологов и врачей по авторским курсам. Профессиональные программы с&nbsp;выдачей международного диплома, дающего право на профессиональную страховку в Израиле
                 
                 .learning__staffgroup
@@ -180,8 +189,17 @@ main
                             img.learning__staff(src="img/learning_4.png", alt="Персонал 4", loading="lazy")
                             .arrow#a4
                                 img(src="img/learnarr_4.svg", alt="")
-
-    article#trust.trust
+    #trust
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    article.trust
         .container
             section.map
                 h2#zagmap.map__title.title Клиники и салоны по всему миру <span>выбирают оборудование Med&nbsp;Beauty</span>
@@ -242,8 +260,17 @@ main
                             h3 Репутация
                             p Оборудование уже успешно используется в известных клиниках
                         img.whywe__image(src="img/icon_8.svg", alt="") 
-
-    article#questions.questions
+    #questions
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    article.questions
         .container
             .questions__wrapper
                 .questions__part1 
@@ -314,7 +341,7 @@ main
                             p Срок гарантии на оборудование начинается от 12 месяцев. По истечении гарантийного срока мы предоставляем услуги постгарантийного обслуживания
                         
                         button.questions__toform(type="button")
-                            img(src="img/arrow.svg", alt="")
+                            img#form-down-2(src="img/arrow.svg", alt="")
 
     article.more
         .container
@@ -326,22 +353,22 @@ main
                         .form__imglab
                             img(src="img/form_call.svg", alt="name")
 
-                        input.form__input(type="text", form="form", name="name_f", id="name-f", placeholder="Ваше имя")
+                        input.form__input(type="text", name="name_f", id="name-f", placeholder="Ваше имя")
 
                     label#label2-f(for="phone-f")
                         .form__imglab
                             img(src="img/form_pers.svg", alt="name")
 
-                        input.form__input.tel-selector(type="tel", form="form",name="phone_f", id="phone-f", placeholder="Ваш телефон")
+                        input.form__input.tel-selector(type="tel", name="phone_f", id="phone-f", placeholder="Ваш телефон")
 
                     label(for="question-f")
-                        textarea.form__input(form="form", name="question_f", id="question-f",  placeholder="Здесь будет Ваш вопрос" maxlength="1500")
+                        textarea.form__input( name="question_f", id="question-f", placeholder="Здесь будет Ваш вопрос" maxlength="1500")
 
-                    input.form__check(type="checkbox", form="form", name="agree_f", id="agree-f", value="Я даю согласие на обработку моих персональных данных")
+                    input.form__check(type="checkbox", name="agree_f", id="agree-f", value="Я даю согласие на обработку моих персональных данных")
                     label.form__check-label(for="agree-f") Я даю согласие на обработку персольных данных в соответствии с политикой конфиденциальности и условием пользования
                     p#warning-f.form__confirm Пожалуйста дайте свое согласие на обработку персональных данных
 
-                    button.form__btn.button__sub(type="button") Связаться
+                    button.form__btn.button__sub(type="submit") Связаться
 
                 aside.video.more__video
                     h2#more_video.video__title.title Видео о&nbsp;нашей компании

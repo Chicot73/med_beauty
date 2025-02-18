@@ -12,11 +12,6 @@
     display: flex;
     // padding-bottom: 10rem;
 
-    @include for-desktop-xxl {
-      padding-right: 6.5rem;
-      padding-left: 6.5rem;
-    }
-
     @include for-tablet-portrait-md {
       display: grid;
       align-content: center;
@@ -26,22 +21,14 @@
 
   &__part1 {
     width: 50%;
-    display: block;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 
     @include for-tablet-portrait-md {
       width: 62rem;
       margin-bottom: 11rem;
-    }
-  }
-
-  &__txt {
-    margin-bottom: 28.5rem;
-
-    @include for-tablet-portrait-md {
-      margin-bottom: 7.5rem;
     }
   }
 
@@ -69,25 +56,40 @@
     & p {
       width: 100%;
       max-width: 44.2rem;
+      position: absolute;
+      bottom: 0;
 
       @include font(400, 1.6rem, 140%);
       color: var(--color-text);
 
+      @include for-tablet-landscape-lg {
+        width: 47%;
+      }
+
       @include for-tablet-portrait-md {
         padding-right: 8rem;
+        position: inherit;
+        width: 100%;
+      }
+
+      @include for-phone-landscape-sm {
+        width: 52%;
+        max-width: auto;
+        padding-right: 0;
       }
     }
   }
 
   &__part2 {
     width: 50%;
+
     // padding-left: 3rem;
     // padding-right: 3rem;
     position: relative;
 
     @include for-tablet-portrait-md {
 
-      width: 89vw;
+      width: 83vw;
       padding: 0;
     }
 
@@ -131,14 +133,32 @@
     & p {
       @include font(400, 1.6rem, 140%);
       color: var(--color-text);
+
+      @include for-tablet-landscape-lg {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      @include for-phone-landscape-sm {
+        margin-top: 0;
+        margin-bottom: 2rem;
+      }
     }
   }
 
   & .txts {
     height: 10rem;
 
+    & p {
+      margin-top: 3rem;
+    }
+
+    @include for-tablet-portrait-md {
+      height: 15rem;
+    }
+
     @include for-phone-landscape-sm {
-      margin-bottom: 7rem;
+      height: 16rem;
     }
   }
 
@@ -150,87 +170,73 @@
 
   &__image {
     width: 100%;
-    height: 56.6rem;
-    // max-width: 29rem;
+    height: 60.6rem;
     position: relative;
-    // height: 57.6rem;
-    // position: absolute;
-    // bottom: -2rem;
-    // left: 50%;
-    // transform: translate(-52%,-50%);
-    // z-index: 1000;
-    // background: transparent;
     margin-top: 3rem;
-    margin-bottom: 7rem;
+    margin-bottom: 2.3rem;
+    margin-right: .2rem;
+
+    @include for-laptop-desktop-xl {
+      margin-top: 6rem;
+    }
 
     @include for-tablet-landscape-lg {
       width: 100%;
-      height: 40.6rem;
+      height: 32.6rem;
       position: relative;
       margin-top: 10rem;
-      margin-bottom: 4rem;
+      margin-top: 71px;
+      margin-bottom: auto;
     }
 
     @include for-tablet-portrait-md {
       // margin-top: 5rem;
-      height: 43vw;
-      margin-top: 4rem;
-      margin-bottom: 2rem;
+      height: 52vw;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    @include for-phone-landscape-sm {
+      height: 54vw;
+      margin-bottom: 4rem;
     }
   }
 
   &__turget {
-    width: 34.4rem;
-    height: 57.6rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -1rem;
+    width: auto;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    transform: scale(.95);
+    // margin-top: -1rem;
 
     & img {
       object-fit: scale-down;
+
+      @include for-phone-landscape-sm {
+        margin-top: -5rem;
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+      }
     }
 
     @include for-tablet-landscape-lg {
-      width: 74%;
-      transform: translate(-50%, -48%);
-      height: 36.6rem;
-      margin-top: -3rem;
+      transform: scale(.5);
+      // height: 36.6rem;
+      // margin-top: -3rem;
     }
 
     @include for-tablet-portrait-md {
 
-      top: 17.6rem;
-      width: 29%;
-      height: 30rem;
+      // top: 17.6rem;
+      // height: 30rem;
     }
 
     @include for-phone-landscape-sm {
-      height: 40rem;
-      top: 20.6rem;
-      width: 30%;
-    }
-  }
-
-  &__turget-1 {
-    margin-top: -7rem;
-
-    @include for-tablet-portrait-md {
-      width: 27%;
-    }
-  }
-
-  &__turget-2 {
-    margin-top: -2rem;
-    width: 23.4rem;
-    height: 50.6rem;
-
-    @include for-tablet-portrait-md {
-      margin-top: -11rem;
-      height: 40rem;
-      top: 28.6rem;
-      width: 23%;
+      transform: scale(.33);
+      // top: 20.6rem;
+      // height: 100%;
     }
   }
 
@@ -329,6 +335,7 @@
     width: 3.5rem;
     height: 3.5rem;
     padding: 1.2rem;
+    bottom: 34rem;
   }
 }
 
@@ -350,21 +357,22 @@
   user-select: none;
 
   @include for-laptop-desktop-xl {
-    right: -3.6rem;
+    right: -3.55rem;
   }
 
   @include for-tablet-landscape-lg {
-    right: -2.6rem;
+    right: -2.55rem;
     width: 5rem;
     height: 5rem;
     padding: 1.5rem;
   }
 
   @include for-phone-landscape-sm {
-    right: -1.7rem;
+    right: -1.65rem;
     width: 3.5rem;
     height: 3.5rem;
     padding: 1.2rem;
+    bottom: 34rem;
   }
 }
 
@@ -391,11 +399,20 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   top: 71rem !important;
 
+  @include for-laptop-desktop-xl {
+    top: 75rem !important;
+  }
+
   @include for-tablet-landscape-lg {
-    top: 60rem !important;
+    top: 49rem !important;
   }
 
   @include for-tablet-portrait-md {
-    display: none !important;
+    position: relative;
+    top: -17rem !important;
+  }
+
+  @include for-phone-landscape-sm {
+    display: none;
   }
 }

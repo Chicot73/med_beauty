@@ -1,6 +1,6 @@
 .decisions {
 
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 
   &__part1 {
     width: 51%;
@@ -39,7 +39,7 @@
       width: 100%;
       padding-left: 7rem;
       padding-right: 0.7vw;
-      padding-bottom: 3.5rem;
+      padding-bottom: 5.5rem;
       padding-top: 2.5rem;
     }
 
@@ -124,6 +124,12 @@
 
     & li:not(:last-child) {
       margin-bottom: 5rem;
+    }
+
+    & li:last-child {
+      position: relative;
+      bottom: -3rem;
+      margin-top: -3rem !important;
     }
   }
 

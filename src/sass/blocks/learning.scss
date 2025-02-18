@@ -1,15 +1,10 @@
 .learning {
 
-  // height: 70rem;
-  margin-bottom: 34rem;
-
-  @include for-laptop-desktop-xl {
-    margin-bottom: 42rem;
-  }
+  margin-bottom: 1rem;
 
   @include for-tablet-landscape-lg {
     height: auto;
-    margin-bottom: 10rem;
+    margin-bottom: 0rem;
   }
 
   &__border {
@@ -50,11 +45,18 @@
   }
 
   &__title {
-    width: 42%;
-    margin-right: 3.9rem;
+    // width: 42%;
+    // margin-right: 3.9rem;
+    width: 38%;
+    margin-right: 7.9rem;
+
+    @include mezdu {
+      width: 40%;
+    }
 
     @include for-laptop-desktop-xl {
       margin-right: 1.9rem;
+      width: 42%;
     }
 
     @include for-tablet-landscape-lg {

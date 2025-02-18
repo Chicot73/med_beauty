@@ -7,27 +7,27 @@ require 'phpmailer/Exception.php';
 
 $json = file_get_contents('php://input');
 $obj = json_decode($json, true);
-$name = $obj['name'];
-$phone = $obj['phone'];
-$question = $obj['question'];
-$agree = $obj['agree'];
+$nameF = $obj['name_f'];
+$phoneF = $obj['phone_f'];
+$questionF = $obj['question_f'];
+$agreeF = $obj['agree_f'];
 
 // Формирование самого письма
-$title = "Новый контакт".$name;
+$title = "Новый контакт".$nameF;
 
 $body = "<h2>Новый контакт на Landing page</h2>
 
   <tr style='background-color: #f8f8f8;'>
-    <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>Клиент: </b>$name</td>
+    <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>Клиент: </b>$nameF</td>
   </tr>
   <tr style='background-color: #ffffff;'>
-    <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>Телефон: </b>$phone</td>
+    <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>Телефон: </b>$phoneF</td>
   </tr>
   <tr style='background-color: #f8f8f8;'>
-    <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>Вопрос клиента: </b>$question</td>
+    <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>Вопрос клиента: </b>$questionF</td>
   </tr>
   <tr style='background-color: #ffffff;'>
-    <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$agree</b></td>
+    <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$agreeF</b></td>
   </tr>";
 $body = "<table style='width: 100%;'>$body</table>";
 

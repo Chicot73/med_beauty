@@ -1,14 +1,14 @@
 .screen {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75.8vw;
-    height: 47.5vw;
-    z-index: 5;
-    background: rgba(126, 126, 126, 0.74);
-    z-index: 1100;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75.8vw;
+  height: 47.5vw;
+  z-index: 5;
+  background: rgba(126, 126, 126, 0.74);
+  z-index: 20100;
 
   &__wrapper {
     position: relative;

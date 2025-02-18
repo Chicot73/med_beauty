@@ -43,7 +43,11 @@
     align-items: center;
 
     @include for-tablet-landscape-lg {
-      top: 48rem;
+      top: 73rem;
+    }
+
+    @include for-tablet-portrait-md {
+      top: 49rem;
     }
 
     @include for-phone-landscape-sm {

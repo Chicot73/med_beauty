@@ -1,0 +1,18 @@
+#acthead {
+  background-color: #141519;
+  backdrop-filter: blur(.1);
+  animation: header .7s ease-out;
+
+  @keyframes header {
+
+    from {
+      background-color: #151322;
+      backdrop-filter: blur(1);
+    }
+
+    to {
+      background-color: #141519;
+      backdrop-filter: blur(.1);
+    }
+  }
+}

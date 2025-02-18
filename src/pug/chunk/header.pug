@@ -5,12 +5,12 @@ header.header
             img.header__logo-burger(src="img/logo.svg", alt="Med Beauty logo")
 
             nav#header_links
-                a.header__burger-item(id="testdrive-item" onclick="TestDriveFn()") Test-drive
+                a.header__burger-item(href="#testdrive" id="testdrive-item") Test-drive
                 a.header__burger-item(href="#") О нас 
                 a.header__burger-item(href="#") Оборудование
                 a.header__burger-item(href="#") Академия
                 a.header__burger-item(href="#") Консалтинг
-                a.header__burger-item(id="questions-item" onclick="questionsFn()") FAQ
+                a.header__burger-item(href="#questions" id="questions-item") FAQ
                 a.header__burger-item(href="#") Контакты
 
             button.header__form-btn.button__sub(type="button") Связаться
@@ -40,7 +40,7 @@ header.header
         label.form__check-label(for="agree") Я даю согласие на обработку персольных данных в соответствии с политикой конфиденциальности и условием пользования
         p#warning.form__confirm Пожалуйста дайте свое согласие на обработку персональных данных
 
-        button.form__btn.button__sub(type="button") Связаться
+        button.form__btn.button__sub(type="submit") Связаться
 
     .container
         .header__top
@@ -49,11 +49,11 @@ header.header
             .header__between
             .header__wrapper
                 nav.header__menu
-                    a.header__menu-item(id="testdrive-item" onclick="TestDriveFn()") Test-drive
-                    a.header__menu-item(id="decisions-item" onclick="decisionsFn()") Решения
-                    a.header__menu-item(id="learning-item" onclick="learningFn()") Обучение                
-                    a.header__menu-item(id="trust-item" onclick="trustFn()") Доверие
-                    a.header__menu-item(id="questions-item" onclick="questionsFn()") FAQ
+                    a.header__menu-item(href="#testdrive" id="testdrive-item") Test-drive
+                    a.header__menu-item(href="#decisions" id="decisions-item") Решения
+                    a.header__menu-item(href="#learning" id="learning-item") Обучение                
+                    a.header__menu-item(href="#trust" id="trust-item") Доверие
+                    a.header__menu-item(href="#questions" id="questions-item") FAQ
                     
                     button.header__chose-lang(type="button")
                         span RU 

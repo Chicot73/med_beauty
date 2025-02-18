@@ -231,7 +231,7 @@
 
   @include for-tablet-portrait-md {
 
-    width: 25rem;
+    width: 27rem;
     top: 20.1rem;
     right: 9.2rem;
     opacity: 1;
@@ -246,7 +246,7 @@
       }
 
       to {
-        width: 25rem;
+        width: 27rem;
         top: 20.1rem;
         right: 9.2rem;
         opacity: 1;
@@ -255,7 +255,7 @@
   }
 
   @include for-phone-landscape-sm {
-    width: 25rem;
+    width: 27rem;
     top: 19.1rem;
     right: 2.2rem;
     opacity: 1;
@@ -271,7 +271,7 @@
       }
 
       to {
-        width: 25rem;
+        width: 27rem;
         top: 19.1rem;
         right: 2.2rem;
         opacity: 1;

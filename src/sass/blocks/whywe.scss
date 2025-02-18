@@ -1,9 +1,10 @@
 .whywe {
 
-  margin-bottom: 15rem;
+  margin-bottom: -2rem;
 
   @include for-phone-landscape-sm {
     margin-top: 39rem;
+    margin-bottom: -8rem;
   }
 
   &__title {

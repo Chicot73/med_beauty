@@ -1,5 +1,10 @@
 .header {
-  background: #151322;
+  background-color: #151322;
+  // background-color: rgba(20, 21, 25, 0.99);
+  backdrop-filter: blur(1);
+  position: sticky;
+  top: 0;
+  z-index: 10000;
 
   &__logo {
     flex-shrink: 0 !important;

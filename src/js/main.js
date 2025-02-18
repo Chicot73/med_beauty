@@ -11,6 +11,18 @@ function alertStart() {
 
 }
 
+let header = document.querySelector('.header');
+
+function headerSticky() {
+
+  function r1() {
+    header.setAttribute("id", "acthead");
+  }
+
+  setTimeout(r1, 1000);
+
+}
+
 function animateHero() {
 
   let m1 = document.querySelector('.hero__module01'),
@@ -45,6 +57,7 @@ function alertFinish(ev) {
     animateHero();
     document.removeEventListener('scroll', alertStart);
     body.style.overflow = 'scroll';
+    headerSticky();
   }
 }
 
@@ -283,7 +296,7 @@ function questionsFn() {
 
 function moreFn() {
   //e.preventDefault();
-  document.getElementById('form-down').scrollIntoView({
+  document.getElementById('form-down-2').scrollIntoView({
     block: "start",
     behavior: 'smooth'
   })
@@ -299,7 +312,7 @@ let burgerMenu = document.querySelector('.header__burger'),
   burgerCloseBtn = document.querySelector('.header__cross'),
   headerCover = document.querySelector('.header__cover'), //затемнение на фоне
   burgerLinks = document.getElementById('header_links'),
-  upForm = document.querySelector(".header__form"),
+  upForm = document.querySelector(".header__form"),//верхняя форма
   burgerGetinfo = document.querySelector('.header__form-btn');
 
 burgerBtn.addEventListener('click', (e) => {
@@ -375,26 +388,64 @@ document.addEventListener('click', (e) => {
 
 
 
-
-
 ///////////////////
 
 // форма отправки и валидация
 
 
-
-// document.addEventListener('click', (e) => {
-
-
 let f_formSucess = false;
-let f_submit = false;
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const form = document.getElementById('form');
+
+
+  form.addEventListener('submit', (event) => {
+
+    event.preventDefault();
+
+    console.log('submit');
+
+    validForm();
+
+    console.log(f_formSucess);
+
+
+    if (f_formSucess === true) {
+
+      const sendForm = (data) => {
+
+        return fetch('finish.php', {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+          }
+        }).then(res => res.json());
+      }
+
+      const dataForm = new FormData(event.target);
+      const user = {};
+
+      dataForm.forEach((val, key) => {
+        user[key] = val;
+      })
+      sendForm(user).then(data => {
+        console.log('Письмо ушло'); //здесь вставлять сообщение об успешной отсылке
+      })
+
+      event.target.reset(); //обнуляет форму
+
+      f_formSucess = false;
+    }
+  })
+})
+
+
 
 let telSelector = document.getElementById('phone'),
   nameSelector = document.getElementById('name'),
   questionSelector = document.getElementById('question');
-
-// Inputmask({ "mask": "+9[99](9[9999])[9[9999]]-[9[9999]]", "greedy": "false" }).mask(telSelector);
-// Inputmask({ "mask": "+9{1,20}/(/)/.-", "greedy": "false" }).mask(telSelectorDown);
 
 const telValid = new Inputmask({
   mask: "+*{1,20}",
@@ -409,8 +460,7 @@ const telValid = new Inputmask({
 telValid.mask(telSelector); //применяем сформированную маску для указанного инпута emailSelector
 
 
-
-let validForm = function (e) {
+let validForm = function () {
 
 
   let long = telSelector.value,
@@ -426,20 +476,18 @@ let validForm = function (e) {
       document.getElementById('warning').style.color = "#49ff0c";
       document.getElementById('warning').textContent = "Спасибо, мы свяжемся с Вами!";
 
-      function f_formSucess() {
-
-        upForm.submit(e);
-
-        sendForm(e); /////////////////////////////////////////////////// ОТПРАВКА ФОРМЫ!!! \\\\\\\\\\\\\\\\\
-
-        f_submit = true;
+      function formSucess() {
 
         closeBurger();
 
         document.getElementById('warning').style.display = "none";
 
       }
-      setTimeout(f_formSucess, 2000);
+      setTimeout(formSucess, 2000);
+
+
+      console.log('процесс отправки формы')
+
 
       function goodby() {
 
@@ -448,6 +496,7 @@ let validForm = function (e) {
         body.style.overflow = 'scroll';
 
       }
+
       setTimeout(goodby, 2000);
 
       console.log('валидация прошла успешно');
@@ -472,55 +521,128 @@ let validForm = function (e) {
   }
 }
 
-let sendForm = function () {
+
+///////////////////
+
+// форма отправки и валидация
 
 
-  document.addEventListener('submit', (e) => {
+let f_formSucess2 = false;
 
-    e.preventDefault;
+document.addEventListener('DOMContentLoaded', function () {
 
-    // validForm(e);
+  const form2 = document.getElementById('form-down');
 
-    if (f_formSucess === true) {
 
-      const sendForm = (data) => {
+  form2.addEventListener('submit', (event) => {
 
-        return fetch('finish.php', {
+    event.preventDefault();
+
+    console.log('submit');
+
+    validForm2();
+
+    console.log(f_formSucess2);
+
+
+    if (f_formSucess2 === true) {
+
+      const sendForm2 = (data) => {
+
+        return fetch('finish2.php', {
           method: 'POST',
           body: JSON.stringify(data),
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
           }
         }).then(res => res.json());
-      };
+      }
 
-      const dataForm = new FormData(e.target);
+      const dataForm = new FormData(event.target);
       const user = {};
 
       dataForm.forEach((val, key) => {
         user[key] = val;
-      });
-      sendForm(user).then(data => {
+      })
+      sendForm2(user).then(data => {
         console.log('Письмо ушло'); //здесь вставлять сообщение об успешной отсылке
-      });
+      })
 
-      e.target.reset(); //обнуляет форму
+      event.target.reset(); //обнуляет форму
 
-      f_formSucess = false;
+      f_formSucess2 = false;
     }
   })
+})
+
+
+
+let telSelector2 = document.getElementById('phone-f'),
+  nameSelector2 = document.getElementById('name-f'),
+  questionSelector2 = document.getElementById('question-f');
+
+const telValid2 = new Inputmask({
+  mask: "+*{1,20}",
+  greedy: false,
+  definitions: {
+    '*': {
+      validator: "[0-9\u0028\u0029\u002d]",//валидация пропускает только числа от 0 до 9, дефис и скобки
+    }
+  }
+});
+
+telValid2.mask(telSelector2); //применяем сформированную маску для указанного инпута emailSelector
+
+
+let validForm2 = function () {
+
+
+  let long4 = telSelector2.value,
+    long5 = nameSelector2.value,
+    long6 = questionSelector2.value;
+  let longNum2 = long4.replace(/[^0-9]/g, ""); //удаляем из строки всё, кроме цифр  // ошибка из-за этого
+
+  if ((document.getElementById('agree-f').checked)) {
+
+    if (((longNum2.length > 2) && (longNum2.length < 50)) && ((long5.length > 1) && (long5.length < 36)) && ((long6.length > 2) && (long6.length < 1501))) {
+
+      document.getElementById('warning-f').style.display = "block";
+      document.getElementById('warning-f').style.color = "#49ff0c";
+      document.getElementById('warning-f').textContent = "Спасибо, мы свяжемся с Вами!";
+
+      function formSucess2() {
+
+        document.getElementById('warning-f').style.display = "none";
+
+      }
+      setTimeout(formSucess2, 2000);
+
+      console.log('валидация прошла успешно');
+
+      f_formSucess2 = true;
+
+    } else {
+
+      console.log('форма не прошла по валидации');
+
+
+      document.getElementById('warning-f').textContent = "Пожалуйста введите правильные данные";
+      document.getElementById('warning-f').style.display = "block";
+
+    }
+  } else {
+
+    console.log('форма не прошла по валидации');
+
+    document.getElementById('warning-f').textContent = "Пожалуйста дайте свое согласие на обработку персональных данных";
+    document.getElementById('warning-f').style.display = "block";
+  }
 }
 
-document.addEventListener('click', (e) => {
 
-  let formRequest = e.target.closest('.form__btn');
 
-  if (formRequest) {
 
-    validForm(e);
 
-  }
-})
 
 
 
